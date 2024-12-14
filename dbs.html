@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mathematics I</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #45a049;
+            --background-dark:black;
+            --text-light: #E0E0E0;
+            --accent-color: #00bcd4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 375px;
+            max-height: 750px;
+            background-color: var(--background-dark);
+            border-radius: 12px;
+            overflow-y: auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 7px;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+        }
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #45a049;
+            --background-dark:black;
+            --text-light: #E0E0E0;
+            --accent-color: #00bcd4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 375px;
+            max-height: 750px;
+            background-color: var(--background-dark);
+            border-radius: 12px;
+            overflow-y: auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 7px;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .info-button {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: var(--text-light);
+            padding: 10px;
+            border: 2px solid rgba(129, 199, 132, 0.1);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .action-btn i {
+            margin-right: 8px;
+        }
+
+        .subjects-table {
+            width: 350px;
+            margin: 20px 0;
+            margin-right: 30px;
+            border-collapse: collapse;
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid rgba(129, 199, 132, 0.1);
+        }
+
+        .subjects-table th,
+        .subjects-table td {
+            padding: 10px;
+            border: 1px solid rgba(129, 199, 132, 0.1);
+            text-align: left;
+            font-size: 12px;
+        }
+
+        .subjects-table th {
+            background-color: transparent;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .subjects-table td a {
+            color: var(--accent-color);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .subjects-table td a.video-link,
+        .subjects-table td a.video-link:hover {
+            color: white !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .video-link i {
+            margin-right: 5px;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #1E1E1E;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 90%;
+            max-height: 70%;
+            overflow-y: auto;
+        }
+
+        .popup-close {
+            float: right;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Progress Tracker Styles */
+        .progress-tracker {
+            display: none;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .progress-toggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid rgba(129, 199, 132, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .progress-toggle i {
+            margin-right: 8px;
+        }
+
+        /* Progress Tracker Styles (Copied from original Progress Tracker) */
+        .progress-tracker .mobile-container {
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+            overflow-y: visible;
+            padding: 5px;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+
+        .progress-tracker .topic-container {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid #444;
+            padding: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .progress-tracker .topic-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        .progress-tracker .topic-points {
+            margin-left: 20px;
+            display: block;
+        }
+
+        .progress-tracker .point-box {
+            margin-bottom: 8px;
+            padding: 1px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .progress-tracker .highlighted {
+            background-color: #4B4B4B;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        .progress-tracker .point-box.checked {
+            background-color: #4B4B4B;
+            color: white;
+        }
+
+        .progress-tracker .highlighted-topic {
+            background-color: #4B4B4B;
+            color: white;
+            border: 1px solid #666;
+        }
+
+        .progress-tracker .topic-points label {
+            display: block;
+            cursor: pointer;
+        }
+
+        .progress-tracker input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        /* Previous styles remain the same */
+
+
+
+
+
+
+        /* Modified video submenu styles */
+        .video-submenu {
+            display: none;
+            position: absolute;
+            background-color: #1E1E1E;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+            border-radius: 8px;
+            padding: 10px;
+            right: 10px;
+            top: 100%;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .video-link-cell {
+            position: relative;
+        }
+
+        .video-submenu a {
+            color: var(--text-light);
+            padding: 8px 12px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .video-submenu a:hover {
+            background-color: #4B4B4B;
+            border-radius: 4px;
+        }
+
+        .video-submenu a i {
+            margin-right: 10px;
+        }
+        .video-submenu {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Previous container content remains the same -->
+        <div class="header">
+            <h1 class="title">Database Systems</h1>
+            <button class="info-button" onclick="openPopup()">Know about DBS</button>
+        </div>
+        <div id="m1-popup" class="popup">
+            <div class="popup-content">
+                <button class="popup-close" onclick="closePopup()">&times;</button>
+                <h2>About Database Systems</h2>
+                <p>M1 covers the essential mathematical concepts you'll need for engineering. Don't panic 😅; <br> some of these concepts are from 12th grade, so you've got this 💪 — no need to re-learn algebra, right? 📚</p>
+                
+                <h3>Key Highlights:</h3>
+                <ul>
+                    <li>Combines theoretical concepts with practical engineering applications</li>
+                    <li>Builds upon mathematical foundations from 12th-grade curriculum</li>
+                    <li>Prepares students for advanced mathematical modeling in engineering</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <a href="https://drive.google.com/file/d/" class="action-btn"><i class="fas fa-file-pdf"></i>Question Bank</a>
+            <a href="https://drive.google.com/file/d/PYQs_placeholder/view" class="action-btn"><i class="fas fa-book"></i>PYQ Pdf</a>
+        </div>
+
+        <!--<a href="#" class="action-btn" style="width: 100%; margin-bottom: 20px;"><i class="fab fa-youtube"></i>Watch Tutorials</a>-->
+
+
+        <table class="subjects-table">
+            <thead>
+                <tr>
+                    <th>Unit</th>
+                    <th>Topic</th>
+                    <th>Notes</th>
+                    <th>Tutorials</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction</td>
+                    <td><a href="https://drive.google.com/file/d/notes_unit1_placeholder/view">Notes</a></td>
+                    <td class="video-link-cell">
+                        <a href="#" class="video-link" onclick="toggleVideoSubmenu(event)"><i class="fab fa-youtube" style="color: white;"></i>Watch</a>
+                        <div class="video-submenu">
+                            <a href="videoplayer.html#https://youtu.be/_T7rcF1mrIw?si=BbR5R1bKCOD1co0n" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Inverse of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Rank of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Normal Form</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Linear Equations</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Eigen Values & Vectors</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Relational Data Model, Relational Algebra and Calculus</td>
+                    <td><a href="https://drive.google.com/file/d/notes_unit1_placeholder/view">Notes</a></td>
+                    <td class="video-link-cell">
+                        <a href="#" class="video-link" onclick="toggleVideoSubmenu(event)"><i class="fab fa-youtube" style="color: white;"></i>Watch</a>
+                        <div class="video-submenu">
+                            <a href="videoplayer.html#https://youtu.be/_T7rcF1mrIw?si=BbR5R1bKCOD1co0n" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Inverse of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Rank of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Normal Form</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Linear Equations</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Eigen Values & Vectors</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Introduction to SQL</td>
+                    <td><a href="https://drive.google.com/file/d/notes_unit1_placeholder/view">Notes</a></td>
+                    <td class="video-link-cell">
+                        <a href="#" class="video-link" onclick="toggleVideoSubmenu(event)"><i class="fab fa-youtube" style="color: white;"></i>Watch</a>
+                        <div class="video-submenu">
+                            <a href="videoplayer.html#https://youtu.be/_T7rcF1mrIw?si=BbR5R1bKCOD1co0n" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Inverse of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Rank of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Normal Form</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Linear Equations</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Eigen Values & Vectors</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Relational Database Design and File Organization, Indexing & Hashing</td>
+                    <td><a href="https://drive.google.com/file/d/notes_unit1_placeholder/view">Notes</a></td>
+                    <td class="video-link-cell">
+                        <a href="#" class="video-link" onclick="toggleVideoSubmenu(event)"><i class="fab fa-youtube" style="color: white; text-decoration: none;"></i>Watch</a>
+                        <div class="video-submenu">
+                            <a href="videoplayer.html#https://youtu.be/_T7rcF1mrIw?si=BbR5R1bKCOD1co0n" style="color: white;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Inverse of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Rank of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Normal Form</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Linear Equations</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Eigen Values & Vectors</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Transaction Processing</td>
+                    <td><a href="https://drive.google.com/file/d/notes_unit1_placeholder/view">Notes</a></td>
+                    <td class="video-link-cell">
+                        <a href="#" class="video-link" onclick="toggleVideoSubmenu(event)"><i class="fab fa-youtube" style="color: white; text-decoration: none;"></i>Watch</a>
+                        <div class="video-submenu">
+                            <a href="videoplayer.html#https://youtu.be/_T7rcF1mrIw?si=BbR5R1bKCOD1co0n" style="color: white;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Inverse of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Rank of Matrix</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Normal Form</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Linear Equations</a>
+                            <a href="#" style="color: white; text-decoration: none;"><i class="fab fa-youtube" style="color: #FF0000;"></i>Eigen Values & Vectors</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <button class="progress-toggle" onclick="toggleProgressTracker()">
+            <i class="fas fa-tasks"></i>Track your Progress here
+        </button>
+
+        <!-- Progress Tracker Section -->
+        <!-- Progress Tracker Section -->
+<div class="progress-tracker">
+    <div class="mobile-container">
+        <h1>Mark your Progress</h1>
+        <p>• Click on the points to highlight them. <br> • Tick the checkbox to highlight the whole topic.</p>
+
+        <div class="topic-container">
+            <div class="topic-title">
+                <label>
+                    <input type="checkbox" class="topic-check"> [Unit 1] Introduction
+                </label>
+            </div>
+            <div class="topic-points">
+                <div class="point-box">1] Database System Applications</div>
+                <div class="point-box">2] Purpose of Database Systems</div>
+                <div class="point-box">3] View of Data</div>
+                <div class="point-box">4] Database Languages</div>
+                <div class="point-box">5] Relational Databases</div>
+                <div class="point-box">6] Database Design</div>
+                <div class="point-box">7] Data Storage and Querying</div>
+                <div class="point-box">8] Transaction Management</div>
+                <div class="point-box">9] Database Architecture</div>
+                <div class="point-box">10] Data Modeling using the Entity Relationship Model</div>
+                <div class="point-box">11] ER Model Concepts and Notation for ER Diagram</div>
+                <div class="point-box">12] Constraints, Keys, E-R Diagrams, Mapping Cardinality</div>
+                <div class="point-box">13] Concepts of Super Key, Candidate Key, Primary Key, Weak Entity Sets</div>
+                <div class="point-box">14] Codd’s Rules and Extended ER Model</div>
+                <div class="point-box">15] Generalization and Aggregation</div>
+                <div class="point-box">16] Reduction of ER Diagrams to Tables</div>
+            </div>
+        </div>
+        
+        <div class="topic-container">
+            <div class="topic-title">
+                <label>
+                    <input type="checkbox" class="topic-check"> [Unit 2] Relational Data Model, Relational Algebra and Calculus
+                </label>
+            </div>
+            <div class="topic-points">
+                <div class="point-box">1] Structure of Relational Databases and Database Schema</div>
+                <div class="point-box">2] Keys in Relational Databases</div>
+                <div class="point-box">3] Relational Algebra: Fundamental Operations</div>
+                <div class="point-box">4] Additional Relational Algebra Operations</div>
+                <div class="point-box">5] Extended Relational Algebra Operations</div>
+                <div class="point-box">6] Tuple Relational Calculus</div>
+                <div class="point-box">7] Domain Relational Calculus</div>
+                <div class="point-box">8] Calculus vs Algebra</div>
+                <div class="point-box">9] Computational Capabilities of Relational Algebra and Calculus</div>
+            </div>
+        </div>
+        
+        <div class="topic-container">
+            <div class="topic-title">
+                <label>
+                    <input type="checkbox" class="topic-check"> [Unit 3] Introduction to SQL
+                </label>
+            </div>
+            <div class="topic-points">
+                <div class="point-box">1] Overview of SQL</div>
+                <div class="point-box">2] SQL Data Definition</div>
+                <div class="point-box">3] Basic Structure of SQL Queries</div>
+                <div class="point-box">4] Additional Basic Operators</div>
+                <div class="point-box">5] Set Operations and Null Values</div>
+                <div class="point-box">6] Aggregate Functions and Nested Subqueries</div>
+                <div class="point-box">7] Modification of the Database</div>
+                <div class="point-box">8] Intermediate SQL: Join Expressions, Views, Transactions</div>
+                <div class="point-box">9] Integrity Constraints and SQL Data Types</div>
+                <div class="point-box">10] Authorization in SQL</div>
+                <div class="point-box">11] Advanced SQL: JDBC, ODBC, Embedded SQL</div>
+                <div class="point-box">12] Functions, Procedures, and Triggers in SQL</div>
+            </div>
+        </div>
+        
+        <div class="topic-container">
+            <div class="topic-title">
+                <label>
+                    <input type="checkbox" class="topic-check"> [Unit 4] Relational Database Design and File Organization, Indexing & Hashing
+                </label>
+            </div>
+            <div class="topic-points">
+                <div class="point-box">1] Normalization: Features of Good Relational Designs</div>
+                <div class="point-box">2] Functional Dependencies</div>
+                <div class="point-box">3] Normal Forms: First, Second, Third Normal Forms, BCNF</div>
+                <div class="point-box">4] Functional Dependency Theory and Multivalued Dependencies</div>
+                <div class="point-box">5] Fourth Normal Form</div>
+                <div class="point-box">6] Database Design Process</div>
+                <div class="point-box">7] File Organization Techniques</div>
+                <div class="point-box">8] Ordered Indices and B+tree Index Files</div>
+                <div class="point-box">9] B Tree Index Files</div>
+                <div class="point-box">10] Static and Dynamic Hashing</div>
+            </div>
+        </div>
+        
+        <div class="topic-container">
+            <div class="topic-title">
+                <label>
+                    <input type="checkbox" class="topic-check"> [Unit 5] Transaction Processing
+                </label>
+            </div>
+            <div class="topic-points">
+                <div class="point-box">1] Transaction Concept and Simple Transaction Model</div>
+                <div class="point-box">2] Transaction Atomicity and Durability</div>
+                <div class="point-box">3] Transaction Isolation and ACID Properties</div>
+                <div class="point-box">4] Serializability in Transaction Processing</div>
+                <div class="point-box">5] Concurrency Control Techniques: Lock-Based Protocols</div>
+                <div class="point-box">6] Deadlock Handling in Transaction Processing</div>
+                <div class="point-box">7] Multiple Granularity in Transaction Processing</div>
+                <div class="point-box">8] Time Stamp-Based Protocols</div>
+                <div class="point-box">9] Recovery System in Database Management</div>
+            </div>
+        </div>
+        
+
+        <!-- Rest of the container content remains the same -->
+    </div>
+
+    <script>
+        // Function to toggle video submenu
+        function toggleVideoSubmenu(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    // Close any open submenus
+    document.querySelectorAll('.video-submenu').forEach(submenu => {
+        if (submenu !== event.target.nextElementSibling) {
+            submenu.style.display = 'none';
+        }
+    });
+
+    // Toggle current submenu
+    const submenu = event.target.nextElementSibling;
+    const isCurrentlyVisible = submenu.style.display === 'block';
+    submenu.style.display = isCurrentlyVisible ? 'none' : 'block';
+
+    // Scroll to the submenu if it's being opened
+    if (!isCurrentlyVisible) {
+        // Use setTimeout to ensure DOM has updated before scrolling
+        setTimeout(() => {
+            // Get the parent table row
+            const parentRow = event.target.closest('tr');
+            
+            // Smooth scroll to the row
+            parentRow.scrollIntoView({
+                behavior: 'smooth', 
+                block: 'center'
+            });
+        }, 100);
+    }
+}
+
+// Existing close submenu when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.video-link-cell')) {
+        document.querySelectorAll('.video-submenu').forEach(submenu => {
+            submenu.style.display = 'none';
+        });
+    }
+});
+
+        
+
+
+
+        function openPopup() {
+            document.getElementById('m1-popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('m1-popup').style.display = 'none';
+        }
+        // Function to toggle progress tracker
+        function toggleProgressTracker() {
+    const tracker = document.querySelector('.progress-tracker');
+    const isCurrentlyVisible = tracker.style.display === 'block';
+    
+    // Toggle visibility
+    tracker.style.display = isCurrentlyVisible ? 'none' : 'block';
+    
+    // If opening the tracker, scroll to it
+    if (!isCurrentlyVisible) {
+        // Use setTimeout to ensure DOM has updated before scrolling
+        setTimeout(() => {
+            tracker.scrollIntoView({
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest'
+            });
+        }, 100);
+    }
+}
+        // Event listeners for point boxes
+        document.querySelectorAll('.point-box').forEach(box => {
+            box.addEventListener('click', () => {
+                box.classList.toggle('highlighted');
+            });
+        });
+
+        // Event listeners for topic checkboxes
+        document.querySelectorAll('.topic-check').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                const topicContainer = e.target.closest('.topic-container');
+                if (e.target.checked) {
+                    topicContainer.classList.add('highlighted-topic');
+                } else {
+                    topicContainer.classList.remove('highlighted-topic');
+                }
+            });
+        });
+
+        // Close popup when clicking outside
+        document.getElementById('m1-popup').addEventListener('click', (e) => {
+            if (e.target.className === 'popup') {
+                closePopup();
+            }
+        });
+
+
+
+
+
+
+        // Function to save progress in localStorage
+function saveProgress() {
+    const progress = {};
+
+    // Save topic checkboxes (whole topics)
+    document.querySelectorAll('.topic-check').forEach((checkbox, index) => {
+        progress[`topic_${index}`] = checkbox.checked;
+    });
+
+    // Save point checkboxes (individual points)
+    document.querySelectorAll('.point-box').forEach((checkbox, index) => {
+        progress[`point_${index}`] = checkbox.classList.contains('checked');
+    });
+
+    localStorage.setItem('progress', JSON.stringify(progress));
+}
+
+// Function to load saved progress from localStorage
+function loadProgress() {
+    const progress = JSON.parse(localStorage.getItem('progress') || '{}');
+
+    // Load topic progress
+    document.querySelectorAll('.topic-check').forEach((checkbox, index) => {
+        const topicKey = `topic_${index}`;
+        checkbox.checked = !!progress[topicKey];
+        if (checkbox.checked) {
+            checkbox.closest('.topic-container').classList.add('highlighted-topic');
+        }
+    });
+
+    // Load point progress
+    document.querySelectorAll('.point-box').forEach((point, index) => {
+        const pointKey = `point_${index}`;
+        if (progress[pointKey]) {
+            point.classList.add('checked');
+        }
+    });
+}
+
+// Event listeners for topics
+document.querySelectorAll('.topic-check').forEach(topic => {
+    topic.addEventListener('change', function () {
+        const container = this.closest('.topic-container');
+        container.classList.toggle('highlighted-topic', this.checked);
+        saveProgress();
+    });
+});
+
+// Event listeners for points
+document.querySelectorAll('.point-box').forEach(point => {
+    point.addEventListener('click', function () {
+        this.classList.toggle('checked');
+        saveProgress();
+    });
+});
+
+// Load saved progress on page load
+loadProgress();
+    </script>
+</body>
+</html>
+
+
