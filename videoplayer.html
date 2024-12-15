@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>YouTube Player with Rotate</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            overscroll-behavior: none;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            touch-action: none;
+        }
+        .video-container {
+            position: relative;
+            width: 375px;
+            height: 750px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        .video-wrapper {
+            position: absolute;
+            width: 375px;
+            height: 240px;
+            transition: all 0.5s ease;
+            transform-origin: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .rotate-button {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 20;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .rotate-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+        .rotate-button i {
+            color: white;
+            font-size: 30px;
+        }
+        .video-wrapper.rotated {
+            width: 730px;
+            height: 355px;
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+        .video-wrapper.rotated iframe {
+            transform: scale(1);
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-wrapper" id="video-wrapper">
+            <iframe id="youtube-frame" frameborder="0" allowfullscreen allow="autoplay; fullscreen"></iframe>
+        </div>
+        <button class="rotate-button" id="rotate-btn" aria-label="Rotate Screen">
+            <i class="fas fa-rotate"></i>
+        </button>
+    </div>
+
+    <script>
+        function extractYouTubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        function loadVideo(videoUrl) {
+            const youtubeId = extractYouTubeId(videoUrl);
+            if (youtubeId) {
+                const youtubeFrame = document.getElementById('youtube-frame');
+                youtubeFrame.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1`;
+            }
+        }
+
+        // Disable scrolling and zooming
+        document.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+        }, { passive: false });
+
+        // Prevent double-tap zoom
+        let lastTap = 0;
+        document.addEventListener('touchstart', (e) => {
+            const now = +new Date();
+            if (now - lastTap <= 300) {
+                e.preventDefault();
+            }
+            lastTap = now;
+        });
+
+        // Rotation functionality
+        const videoWrapper = document.getElementById('video-wrapper');
+        const rotateBtn = document.getElementById('rotate-btn');
+        const youtubeFrame = document.getElementById('youtube-frame');
+        let isRotated = false;
+        
+        rotateBtn.addEventListener('click', () => {
+            isRotated = !isRotated;
+            videoWrapper.classList.toggle('rotated', isRotated);
+        });
+
+        // Load video from URL hash
+        window.addEventListener('load', () => {
+            const videoUrl = window.location.hash.substring(1);
+            if (videoUrl) {
+                loadVideo(decodeURIComponent(videoUrl));
+            }
+        });
+
+        // Error handling
+        youtubeFrame.addEventListener('error', () => {
+            const errorDiv = document.createElement('div');
+            errorDiv.style.color = 'white';
+            errorDiv.style.textAlign = 'center';
+            errorDiv.style.padding = '20px';
+            errorDiv.innerHTML = 'Failed to load video! Check the video URL.';
+            document.body.appendChild(errorDiv);
+        });
+    </script>
+</body>
+</html>
