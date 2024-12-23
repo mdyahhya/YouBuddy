@@ -466,13 +466,13 @@
 // SECTION 2: Image Posts
 const images = [
     {
-        url: "path/to/your/image1.jpg",
-        caption: "Beautiful sunset 🌅",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20games/Basket-Hoop-lg.jpg?t=2024-12-23T10%3A28%3A04.425Z",
+        caption: "Basket Hoop game",
         timestamp: "2 Nov"
     },
     {
-        url: "path/to/your/image2.jpg",
-        caption: "Team building day! 👥",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20games/stickman.jpg?t=2024-12-23T10%3A28%3A26.807Z",
+        caption: "Stickman Game",
         timestamp: "14 Oct"
     }
 ];
@@ -574,7 +574,7 @@ function loadPosts(direction = 'down') {
     if (postsToShow.length === 0 && !isEndMessageDisplayed) {
         const endMessage = document.createElement('div');
         endMessage.className = 'post end-message';
-        endMessage.innerHTML = '✨ You\'ve reached the end! Scroll down or click arrow to refresh!';
+        endMessage.innerHTML = 'That’s all for today! Use the arrow button to refresh for new posts';
         feedContainer.appendChild(endMessage);
         isEndMessageDisplayed = true;
         return;
