@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "username": "teacher1",
+      "password": "admin123",
+      "role": "teacher",
+      "name": "Mr. Smith"
+    },
+    {
+      "username": "john_doe",
+      "password": "john123",
+      "role": "student",
+      "name": "John Doe"
+    },
+    {
+      "username": "sarah_smith",
+      "password": "sarah456",
+      "role": "student",
+      "name": "Sarah Smith"
+    },
+    {
+      "username": "mike_brown",
+      "password": "mike789",
+      "role": "student",
+      "name": "Mike Brown"
+    },
+    {
+      "username": "emma_wilson",
+      "password": "emma321",
+      "role": "student",
+      "name": "Emma Wilson"
+    },
+    {
+      "username": "alex_jones",
+      "password": "alex654",
+      "role": "student",
+      "name": "Alex Jones"
+    }
+  ]
+}
