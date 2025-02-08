@@ -1,6 +1,6 @@
 [
     {
-        "subject": "math",
+        "subject": "english",
         "question": "What is the plural form of 'child'?",
         "options": [
             "Childs",
@@ -11,7 +11,7 @@
         "correctAnswer": 1
     },
     {
-        "subject": "math",
+        "subject": "english",
         "question": "Which word is an antonym of 'brave'?",
         "options": [
             "Courageous",
@@ -22,7 +22,7 @@
         "correctAnswer": 2
     },
     {
-        "subject": "math",
+        "subject": "english",
         "question": "What is the past tense of 'run'?",
         "options": [
             "Ran",
@@ -33,7 +33,7 @@
         "correctAnswer": 0
     },
     {
-        "subject": "math",
+        "subject": "english",
         "question": "Which sentence is grammatically correct?",
         "options": [
             "She don’t like apples.",
