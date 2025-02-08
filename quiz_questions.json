@@ -1,1 +1,223 @@
+[
+    {
+        "subject": "english",
+        "question": "What is the plural form of 'child'?",
+        "options": [
+            "Childs",
+            "Children",
+            "Childes",
+            "Childies"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "english",
+        "question": "Which word is an antonym of 'brave'?",
+        "options": [
+            "Courageous",
+            "Bold",
+            "Timid",
+            "Fearless"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "english",
+        "question": "What is the past tense of 'run'?",
+        "options": [
+            "Ran",
+            "Running",
+            "Runs",
+            "Runned"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "subject": "english",
+        "question": "Which sentence is grammatically correct?",
+        "options": [
+            "She don’t like apples.",
+            "She doesn’t likes apples.",
+            "She doesn’t like apples.",
+            "She didn’t likes apples."
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "What type of word is 'quickly'?",
+        "options": [
+            "Noun",
+            "Verb",
+            "Adjective",
+            "Adverb"
+        ],
+        "correctAnswer": 3
+    },
+    {
+        "subject": "math",
+        "question": "Which of the following is a proper noun?",
+        "options": [
+            "City",
+            "Dog",
+            "London",
+            "River"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "Which word is a synonym for 'huge'?",
+        "options": [
+            "Tiny",
+            "Massive",
+            "Little",
+            "Narrow"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "Which sentence is in passive voice?",
+        "options": [
+            "The cat chased the mouse.",
+            "She is reading a book.",
+            "The cake was baked by my mom.",
+            "I drink coffee every morning."
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "Identify the correct spelling:",
+        "options": [
+            "Recieve",
+            "Receive",
+            "Recive",
+            "Receeve"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "Which of the following is a conjunction?",
+        "options": [
+            "Run",
+            "And",
+            "Quickly",
+            "Dog"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "What is 15 + 27?",
+        "options": [
+            "32",
+            "42",
+            "52",
+            "58"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "What is the product of 9 × 8?",
+        "options": [
+            "63",
+            "72",
+            "81",
+            "90"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "Which number is a prime number?",
+        "options": [
+            "12",
+            "15",
+            "17",
+            "20"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "What is 144 ÷ 12?",
+        "options": [
+            "10",
+            "11",
+            "12",
+            "13"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "What is the square of 7?",
+        "options": [
+            "42",
+            "47",
+            "49",
+            "56"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "What is the cube root of 27?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "If a triangle has angles of 40° and 60°, what is the third angle?",
+        "options": [
+            "70°",
+            "80°",
+            "90°",
+            "100°"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "What is the value of 5! (5 factorial)?",
+        "options": [
+            "60",
+            "100",
+            "120",
+            "150"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "A rectangle has a length of 10 cm and a width of 5 cm. What is its area?",
+        "options": [
+            "25 cm²",
+            "40 cm²",
+            "50 cm²",
+            "60 cm²"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "If a car travels 60 km in 2 hours, what is its speed?",
+        "options": [
+            "20 km/h",
+            "30 km/h",
+            "40 km/h",
+            "50 km/h"
+        ],
+        "correctAnswer": 1
+    }
+]
 
