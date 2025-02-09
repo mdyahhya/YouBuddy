@@ -1,6 +1,6 @@
 [
     {
-        "subject": "math",
+        "subject": "english",
         "question": "What is the plural form of 'child'?",
         "options": [
             "Childs",
@@ -11,7 +11,7 @@
         "correctAnswer": 1
     },
     {
-        "subject": "math",
+        "subject": "english",
         "question": "Which word is an antonym of 'brave'?",
         "options": [
             "Courageous",
