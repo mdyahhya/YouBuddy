@@ -1,0 +1,167 @@
+[
+    {
+        "subject": "english",
+        "question": "What is the plural form of 'mouse'?",
+        "options": [
+            "Mouses",
+            "Mice",
+            "Mices",
+            "Mousies"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "english",
+        "question": "Which is a compound word?",
+        "options": [
+            "Happy",
+            "Sunshine",
+            "Beautiful",
+            "Gentle"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "english",
+        "question": "What is the past participle of 'eat'?",
+        "options": [
+            "Ate",
+            "Eaten",
+            "Eating",
+            "Eated"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "What is the result of 7 × 13?",
+        "options": [
+            "81",
+            "91",
+            "84",
+            "94"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "If x + 15 = 40, what is x?",
+        "options": [
+            "20",
+            "25",
+            "30",
+            "35"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "english",
+        "question": "Which word is a homophone of 'their'?",
+        "options": [
+            "There",
+            "They're",
+            "Both A and B",
+            "Neither"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "What is 25% of 200?",
+        "options": [
+            "25",
+            "40",
+            "50",
+            "75"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "english",
+        "question": "Which sentence contains an adverb?",
+        "options": [
+            "The cat is black",
+            "She ran quickly",
+            "I love cake",
+            "Trees are tall"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "What is the perimeter of a square with sides of 8 cm?",
+        "options": [
+            "24 cm",
+            "32 cm",
+            "40 cm",
+            "64 cm"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "english",
+        "question": "What type of word is 'beneath'?",
+        "options": [
+            "Adjective",
+            "Preposition",
+            "Adverb",
+            "Conjunction"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "What is the least common multiple (LCM) of 6 and 8?",
+        "options": [
+            "12",
+            "24",
+            "48",
+            "72"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "english",
+        "question": "Which word is a synonym for 'beautiful'?",
+        "options": [
+            "Ugly",
+            "Pretty",
+            "Plain",
+            "Simple"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "math",
+        "question": "What is the value of π (pi) rounded to 2 decimal places?",
+        "options": [
+            "3.12",
+            "3.14",
+            "3.16",
+            "3.18"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "subject": "english",
+        "question": "What is the superlative form of 'good'?",
+        "options": [
+            "Gooder",
+            "More good",
+            "Best",
+            "Better"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "subject": "math",
+        "question": "Simplify: (3 × 4) + (2 × 5)",
+        "options": [
+            "22",
+            "20",
+            "24",
+            "26"
+        ],
+        "correctAnswer": 0
+    }
+]
