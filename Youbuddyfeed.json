@@ -1,0 +1,2468 @@
+const tweets = [
+    {
+        "heading": "Study Tip",
+        "text": "Engineering problems can look intimidating, but breaking them down into smaller steps can make them much easier to handle. Take one step at a time, and you'll be amazed at how much progress you can make!",
+        "timestamp": "1 Oct"
+    },
+    
+    
+    {
+        "heading": "Organized Workspace",
+        "text": "Stay organized, both in your notes and your workspace. A messy desk equals a messy mind, and in engineering, that’s the last thing you want!",
+        "timestamp": "6 Oct"
+    },
+    {
+        "heading": "Consistency",
+        "text": "Great things don’t happen overnight. Keep working hard, stay disciplined, and trust the process.",
+        "timestamp": "7 Oct"
+    },
+    
+    {
+        "heading": "Visualization",
+        "text": "Try drawing diagrams and flowcharts to study complex concepts. Visualizing ideas makes them clearer and easier to remember.",
+        "timestamp": "9 Oct"
+    },
+    
+    {
+        "heading": "Ask for Help",
+        "text": "Don't hesitate to ask for help when you're stuck. Study groups and different perspectives can work wonders!",
+        "timestamp": "11 Oct"
+    },
+    {
+        "heading": "Discipline",
+        "text": "Discipline is the bridge between goals and accomplishment. Keep pushing, and success will follow!",
+        "timestamp": "12 Oct"
+    },
+    {
+        "heading": "Revision Tip",
+        "text": "Spaced repetition is a proven technique to boost retention. Review your notes after one day, one week, and one month.",
+        "timestamp": "13 Oct"
+    },
+    
+    {
+        "heading": "Hard Work",
+        "text": "Hard work beats talent when talent doesn’t work hard. Stay disciplined and keep pushing!",
+        "timestamp": "16 Oct"
+    },
+    {
+        "heading": "Mastering Exams",
+        "text": "Plan study sessions well in advance. Walking into the exam room feeling prepared is the best confidence booster!",
+        "timestamp": "17 Oct"
+    },
+    {
+        "heading": "Group Projects",
+        "text": "Group projects in engineering: One person does everything, and the rest of the group says, ‘Looks good!’ 😅",
+        "timestamp": "18 Oct"
+    },
+    
+    {
+        "heading": "Final Exams",
+        "text": "Finals week: ‘I’m totally going to finish all my revision in a day.’ *Three days later* ‘Still on page one.’",
+        "timestamp": "20 Oct"
+    },
+    {
+        "heading": "Engineering Life",
+        "text": "Engineering classes: An endless loop of trying to understand the impossible... then realizing you did it wrong.",
+        "timestamp": "21 Oct"
+    },
+    
+    {
+        "heading": "Caffeine MVP",
+        "text": "Caffeine is the MVP of the engineering world. Without it, we’d all be stuck on the first chapter.",
+        "timestamp": "25 Oct"
+    },
+    {
+        "heading": "When You Solve It",
+        "text": "After hours of struggle, you solve that impossible problem. ‘I’m a genius!’... then realize you misunderstood the question. 🤦‍♂️",
+        "timestamp": "26 Oct"
+    },
+    {
+        "heading": "End of Semester",
+        "text": "I have 3 assignments, 2 exams, and 1 week left. What’s the plan? Panic! 😱",
+        "timestamp": "27 Oct"
+    },
+    {
+        "heading": "Achieving Greatness",
+        "text": "The difference between who you are and who you want to be is the work you put in. Discipline is key.",
+        "timestamp": "28 Oct"
+    },
+    
+    {
+        "heading": "Procrastination Art",
+        "text": "Procrastination is an art, and engineers are the Picasso of it. 🎨",
+        "timestamp": "30 Oct"
+    },
+    {
+        "heading": "Study Tip",
+        "text": "Engineering problems can look intimidating, but breaking them down into smaller steps can make them much easier to handle. Take one step at a time, and you'll be amazed at how much progress you can make!",
+        "timestamp": "12 Aug"
+    },
+    {
+        "heading": "Success Tip",
+        "text": "Don’t wait until the last minute to start studying. Start early and stay consistent. The more time you give yourself, the easier it will be to absorb complex concepts. The key is steady progress, not last-minute cramming!",
+        "timestamp": "13 Aug"
+    },
+    {
+        "heading": "Engineering Hack",
+        "text": "Memorizing formulas might help in the short term, but understanding the logic behind them will help you retain the knowledge for the long run. Aim for deeper understanding, not just memorization!",
+        "timestamp": "14 Aug"
+    },
+    {
+        "heading": "Focus",
+        "text": "Success is not about speed, it’s about focus. Stay focused, stay disciplined, and you’ll reach your goal!",
+        "timestamp": "15 Aug"
+    },
+    {
+        "heading": "Study Strategy",
+        "text": "The key to mastering engineering is practice. The more problems you solve, the more you understand. It’s all about learning by doing, so make sure to solve practice questions regularly!",
+        "timestamp": "16 Aug"
+    },
+    {
+        "heading": "Engineer’s Tip",
+        "text": "Stay organized, both in your notes and your workspace. A messy desk equals a messy mind, and in engineering, that’s the last thing you want. Keep everything neat and your brain will be just as organized!",
+        "timestamp": "17 Aug"
+    },
+    {
+        "heading": "On Consistency",
+        "text": "Great things don’t happen overnight. Keep working hard, stay disciplined, and trust the process.",
+        "timestamp": "18 Aug"
+    },
+   
+    {
+        "heading": "Tough Subjects",
+        "text": "Don't hesitate to ask for help when you're stuck. Whether it's from a professor, a classmate, or a tutor, getting different perspectives can make all the difference. Study groups can work wonders!",
+        "timestamp": "22 Aug"
+    },
+    {
+        "heading": "Discipline",
+        "text": "Discipline is the bridge between goals and accomplishment. Keep pushing, and success will follow!",
+        "timestamp": "23 Aug"
+    },
+    {
+        "heading": "Revision Tip",
+        "text": "Spaced repetition is one of the most effective study techniques. Instead of cramming everything in one night, review your notes after one day, one week, and one month. It’s proven to boost retention!",
+        "timestamp": "24 Aug"
+    },
+    {
+        "heading": "Achieving Dreams",
+        "text": "Success is the sum of small efforts repeated day in and day out. Stay disciplined, and your dreams will be reality.",
+        "timestamp": "25 Aug"
+    },
+    {
+        "heading": "Maximize Productivity",
+        "text": "Engineering students know the struggle of staying focused. Try using the Pomodoro Technique – 25 minutes of focused study, followed by a 5-minute break. It keeps your brain fresh and your productivity high!",
+        "timestamp": "26 Aug"
+    },
+    {
+        "heading": "On Hard Work",
+        "text": "Hard work beats talent when talent doesn’t work hard. Stay disciplined and keep pushing!",
+        "timestamp": "27 Aug"
+    },
+    {
+        "heading": "Achieving Greatness",
+        "text": "The difference between who you are and who you want to be is the work you put in. Discipline is key.",
+        "timestamp": "28 Aug"
+    },
+    {
+        "heading": "Study Trick",
+        "text": "Engineering exams don’t have to be stressful if you stay organized. Start by outlining your syllabus, then break it down into bite-sized pieces. Tackle one thing at a time and watch your confidence grow!",
+        "timestamp": "29 Aug"
+    },
+    {
+        "heading": "Success Mantra",
+        "text": "Never leave your studying until the night before an exam. Plan your study sessions well in advance, and you’ll walk into the exam room feeling calm, confident, and ready to tackle any challenge!",
+        "timestamp": "30 Aug"
+    },
+    {
+        "heading": "On Focus",
+        "text": "Focus on your goal, not on your fear. When you stay disciplined, nothing is impossible!",
+        "timestamp": "31 Aug"
+    },
+
+
+
+
+];
+
+
+
+// SECTION 2: Image Posts
+const images = [
+
+{
+        id: "img1",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/1.jpg?t=2024-12-25T19%3A26%3A19.362Z",
+        caption: "",
+        timestamp: "15 Aug"
+    },
+    {
+        id: "img2",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/2.jpg?t=2024-12-25T19%3A27%3A42.654Z",
+        caption: "",
+        timestamp: "22 Sep"
+    },
+    {
+        id: "img3",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/3.jpg?t=2024-12-25T19%3A28%3A18.393Z",
+        caption: "",
+        timestamp: "5 Oct"
+    },
+    {
+        id: "img4",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/4.jpg?t=2024-12-25T19%3A28%3A47.917Z",
+        caption: "",
+        timestamp: "19 Nov"
+    },
+    {
+        id: "img5",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/5.jpg?t=2024-12-25T19%3A29%3A15.943Z",
+        caption: "",
+        timestamp: "12 Oct"
+    },
+    {
+        id: "img6",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/6.jpg?t=2024-12-25T19%3A29%3A37.112Z",
+        caption: "",
+        timestamp: "8 Nov"
+    },
+    {
+        id: "img7",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/7.jpg?t=2024-12-25T19%3A30%3A04.640Z",
+        caption: "",
+        timestamp: "30 Oct"
+    },
+    {
+        id: "img8",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/8.jpg?t=2024-12-25T19%3A30%3A42.652Z",
+        caption: "",
+        timestamp: "4 Dec"
+    },
+    {
+        id: "img9",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/9.jpg?t=2024-12-25T19%3A31%3A07.580Z",
+        caption: "",
+        timestamp: "20 Aug"
+    },
+    {
+        id: "img10",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/10.jpg?t=2024-12-25T19%3A31%3A32.980Z",
+        caption: "",
+        timestamp: "17 Nov"
+    },
+    {
+        id: "img11",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/11.jpg?t=2024-12-25T19%3A32%3A02.918Z",
+        caption: "",
+        timestamp: "28 Aug"
+    },
+    {
+        id: "img12",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/12.jpg?t=2024-12-25T19%3A32%3A33.376Z",
+        caption: "",
+        timestamp: "10 Sep"
+    },
+    {
+        id: "img13",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/13.jpg?t=2024-12-25T19%3A33%3A20.871Z",
+        caption: "",
+        timestamp: "25 Oct"
+    },
+    {
+        id: "img14",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/14.jpg?t=2024-12-25T19%3A34%3A14.218Z",
+        caption: "",
+        timestamp: "16 Sep"
+    },
+    {
+        id: "img15",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/15.jpg?t=2024-12-25T19%3A34%3A53.927Z",
+        caption: "",
+        timestamp: "22 Aug"
+    },
+    
+    {
+        id: "img16",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/16.jpg?t=2024-12-25T19%3A36%3A15.327Z",
+        caption: "",
+        timestamp: "14 Dec"
+    },
+    {
+        id: "img17",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/17.jpg?t=2024-12-25T19%3A36%3A50.341Z",
+        caption: "",
+        timestamp: "6 Sep"
+    },
+    {
+        id: "img18",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/18.jpg?t=2024-12-25T19%3A37%3A11.476Z",
+        caption: "",
+        timestamp: "12 Oct"
+    },
+    {
+        id: "img19",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/19.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img20",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/20.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img21",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/21.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img22",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/22.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img23",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/23.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img24",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/24.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img25",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/25.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img26",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/26.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img27",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/27.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img28",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/28.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img29",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/29.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img30",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/30.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img31",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/31.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img32",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/32.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img33",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/33.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img34",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/34.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img35",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/35.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img36",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/36.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img37",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/37.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img38",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/38.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img39",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/39.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img40",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/40.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img41",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/41.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img42",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/42.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img43",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/43.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img44",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/44.jpg",
+        caption: "",
+        timestamp: ""
+    },
+    {
+        id: "img45",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/45.jpg",
+        caption: "",
+        timestamp: ""
+    }
+    
+];
+
+// Add remaining up to img54
+for (let i = 46; i <= 54; i++) {
+    images.push({
+        id: `img${i}`,
+        url: `https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20Images/${i}.jpg`,
+        caption: "",
+        timestamp: ""
+    });
+}
+
+console.log(images);
+
+
+
+const gifs = [
+    {
+        id: "gif1",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/14.gif",
+        timestamp: "25 Dec"
+    },
+    {
+        id: "gif2",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/1.gif?t=2024-12-25T17%3A46%3A12.422Z",
+        timestamp: "5 Aug"
+    },
+    {
+        id: "gif3",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/2.gif?t=2024-12-25T17%3A47%3A36.501Z",
+        timestamp: "12 Aug"
+    },
+    {
+        id: "gif4",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/3.gif?t=2024-12-25T17%3A47%3A44.474Z",
+        timestamp: "20 Aug"
+    },
+    {
+        id: "gif5",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/4.gif?t=2024-12-25T17%3A47%3A51.609Z",
+        timestamp: "29 Aug"
+    },
+    {
+        id: "gif6",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/5.gif?t=2024-12-25T17%3A47%3A58.684Z",
+        timestamp: "15 Sep"
+    },
+    {
+        id: "gif7",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/6.gif?t=2024-12-25T17%3A48%3A06.781Z",
+        timestamp: "27 Sep"
+    },
+    {
+        id: "gif8",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/7.gif?t=2024-12-25T17%3A48%3A42.661Z",
+        timestamp: "8 Oct"
+    },
+    {
+        id: "gif9",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/8.gif?t=2024-12-25T17%3A48%3A49.384Z",
+        timestamp: "19 Oct"
+    },
+    {
+        id: "gif10",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/9.gif?t=2024-12-25T17%3A48%3A57.178Z",
+        timestamp: "31 Oct"
+    },
+    {
+        id: "gif11",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/10.gif?t=2024-12-25T17%3A49%3A04.966Z",
+        timestamp: "12 Nov"
+    },
+    {
+        id: "gif12",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/11.gif?t=2024-12-25T17%3A49%3A16.411Z",
+        timestamp: "25 Nov"
+    },
+    {
+        id: "gif13",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/12.gif?t=2024-12-25T17%3A49%3A23.309Z",
+        timestamp: "7 Dec"
+    },
+    {
+        id: "gif14",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/13.gif?t=2024-12-25T17%3A49%3A30.955Z",
+        timestamp: "20 Dec"
+    },
+    {
+        id: "gif15",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/robogif%20(1).gif?t=2024-12-25T08%3A32%3A06.196Z",
+        timestamp: "25 Dec"
+    },
+    
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/15.gif?t=2024-12-27T19%3A19%3A27.699Z",
+        timestamp: "5 Aug"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/16.gif?t=2024-12-27T19%3A19%3A51.117Z",
+        timestamp: "14 Sep"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/17.gif",
+        timestamp: "21 Oct"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/18.gif?t=2024-12-27T19%3A20%3A29.125Z",
+        timestamp: "11 Nov"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/19.gif?t=2024-12-27T19%3A20%3A37.031Z",
+        timestamp: "19 Nov"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/20.gif?t=2024-12-27T19%3A20%3A45.297Z",
+        timestamp: "2 Dec"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/21.gif?t=2024-12-27T19%3A20%3A52.838Z",
+        timestamp: "16 Aug"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/22.gif?t=2024-12-27T19%3A21%3A00.611Z",
+        timestamp: "22 Sep"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/23.gif?t=2024-12-27T19%3A21%3A11.037Z",
+        timestamp: "3 Oct"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/24.gif?t=2024-12-27T19%3A21%3A18.826Z",
+        timestamp: "7 Nov"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/25.gif?t=2024-12-27T19%3A21%3A27.376Z",
+        timestamp: "15 Dec"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/26.gif?t=2024-12-27T19%3A21%3A35.646Z",
+        timestamp: "20 Aug"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/27.gif?t=2024-12-27T19%3A21%3A43.617Z",
+        timestamp: "30 Sep"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/28.gif?t=2024-12-27T19%3A21%3A53.603Z",
+        timestamp: "18 Oct"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/29.gif?t=2024-12-27T19%3A22%3A16.474Z",
+        timestamp: "25 Dec"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/29.gif?t=2024-12-27T19%3A22%3A16.474Z",
+        timestamp: "5 Sep"
+    },
+    {
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20GIFs/30.gif?t=2024-12-27T19%3A22%3A46.836Z",
+        timestamp: "12 Oct"
+    }
+
+];
+
+
+// Data structure for videos
+// SECTION 3: Video Posts
+const videos = [
+    {
+        id: "vid1",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/1.mp4",
+        caption: "Don't overthink it—hesitation is just fear in disguise. If you're unsure but it feels right, take the leap and just do it!",
+        timestamp: "8 Aug"
+    },
+    {
+        id: "vid2",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/2.mp4",
+        caption: "If you're feeling stuck, start small—100 words, 100 emails, or 100 steps. Progress begins with action, no matter how small!",
+        timestamp: "15 Aug"
+    },
+    {
+        id: "vid3",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/3.mp4",
+        caption: "We can't open new doors to the future if we're still holding onto the keys of the past. Let go to move forward!",
+        timestamp: "22 Aug"
+    },
+    {
+        id: "vid4",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/4.mp4",
+        caption: "20 years from now, the only people who will truly remember you are your kids—invest your time where it matters most.",
+        timestamp: "1 Sep"
+    },
+    {
+        id: "vid5",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/5.mp4",
+        caption: "Everything you're worrying about now will fade away before you know it. Your only focus should be on growing and getting better every day.",
+        timestamp: "10 Sep"
+    },
+    {
+        id: "vid6",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/6.mp4",
+        caption: "Some people experience time differently—they let their future self guide decisions and accomplish more in one day than others do in a month. They understand the power of focus and intentionality, turning each moment into an opportunity to move closer to their goals.",
+        timestamp: "18 Sep"
+    },
+    {
+        id: "vid7",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/7.mp4",
+        caption: "You have to be obsessed with the dream, not just passionate about it. It's the relentless pursuit, the sleepless nights, and the unwavering focus that turns a vision into reality.",
+        timestamp: "25 Sep"
+    },
+    {
+        id: "vid8",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/8.mp4",
+        caption: "Turn off your phone and you will turn on inspiration. Disconnecting from distractions opens up space for creativity, clarity, and the flow of new ideas.",
+        timestamp: "2 Oct"
+    },
+    {
+        id: "vid9",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/9.mp4",
+        caption: "Don't follow your dreams, follow your gifts. Dreams are visions of what's possible, but your gifts are the unique tools you have to make it real.",
+        timestamp: "8 Oct"
+    },
+    {
+        id: "vid10",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/10.mp4",
+        caption: "If you wait until you're motivated, you've already lost. Motivation comes through action, not before it—start now, and the drive will follow.",
+        timestamp: "15 Oct"
+    },
+    {
+        id: "vid11",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/11.mp4",
+        caption: "Winning never visits you in your daydreams; it visits you in nightmares, when you're pushed to your limits, tested by adversity, and forced to rise above your fears.",
+        timestamp: "22 Oct"
+    },
+    {
+        id: "vid12",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/12.mp4",
+        caption: "Some people think, some people do, some complain, and some change. The difference lies in the willingness to take action and transform challenges into opportunities for growth.",
+        timestamp: "28 Oct"
+    },
+    {
+        id: "vid13",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/13.mp4",
+        caption: "Your goal in life is not just to succeed, but to do what you love. Success follows passion, and when you pursue what truly excites you, fulfillment becomes the ultimate achievement.",
+        timestamp: "3 Nov"
+    },
+    {
+        id: "vid14",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/14.mp4",
+        caption: "Everyone you meet is part of your journey, but not all are meant to stay in your life. Some are there to teach you lessons, while others are meant to guide you forward and help you grow.",
+        timestamp: "8 Nov"
+    },
+    {
+        id: "vid15",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/15.mp4",
+        caption: "Some people think, some people do, some complain, and some change. The difference lies in the willingness to take action and transform challenges into opportunities for growth.",
+        timestamp: "12 Nov"
+    },
+    {
+        id: "vid16",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/16.mp4",
+        caption: "Productivity is a lot more simple than you think. It's about focusing on what truly matters, breaking tasks into manageable steps, and consistently taking action, no matter how small.",
+        timestamp: "15 Nov"
+    },
+    {
+        id: "vid17",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/17.mp4",
+        caption: "Three choices matter more than anything!",
+        timestamp: "18 Nov"
+    },
+    {
+        id: "vid18",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/18.mp4",
+        caption: "AGAIN -> AGAIN -> aGAIN. The key to success is persistence. Every setback is just another chance to rise, try, and conquer.",
+        timestamp: "21 Nov"
+    },
+    {
+        id: "vid19",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/19.mp4",
+        caption: "Ask yourself one question...",
+        timestamp: "24 Nov"
+    },
+    {
+        id: "vid20",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/20.mp4",
+        caption: "You have to choose between an ordinary life that makes sense and an extraordinary life that excites you.",
+        timestamp: "27 Nov"
+    },
+    {
+        id: "vid21",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/21.mp4",
+        caption: "Don't turn off the voice...",
+        timestamp: "30 Nov"
+    },
+    {
+        id: "vid22",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/22.mp4",
+        caption: "Momentum breeds momentum. Once you start, the energy builds, and the small wins compound, making it easier to keep moving forward with even more power and focus.",
+        timestamp: "1 Dec"
+    },
+    {
+        id: "vid23",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/23.mp4",
+        caption: "Declutter your mind. Clear out the noise and distractions, and make space for clarity, creativity, and focus on what truly matters.",
+        timestamp: "4 Dec"
+    },
+    {
+        id: "vid24",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/24.mp4",
+        caption: "THE REAL TRAP!",
+        timestamp: "7 Dec"
+    },
+    {
+        id: "vid25",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/25.mp4",
+        caption: "If you feel stressed, take a break. Stepping away for a moment clears your mind, recharges your energy, and helps you return with a fresh perspective and renewed focus.",
+        timestamp: "10 Dec"
+    },
+    {
+        id: "vid26",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/26.mp4",
+        caption: "Outside of the BOX",
+        timestamp: "12 Dec"
+    },
+    {
+        id: "vid27",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/27.mp4",
+        caption: "Fall in love with the hard part. The challenges and struggles are where growth happens, and embracing them will lead you to the success you desire.",
+        timestamp: "14 Dec"
+    },
+    {
+        id: "vid28",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/28.mp4",
+        caption: "Wakeup",
+        timestamp: "16 Dec"
+    },
+    {
+        id: "vid29",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/29.mp4",
+        caption: "Be the one who goes first. Take the initiative, lead by example, and set the tone for others to follow. Courage to start is often the difference between staying stuck and making progress.",
+        timestamp: "18 Dec"
+    },
+    {
+        id: "vid30",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/30.mp4",
+        caption: "You're born with the gift—what matters is how you nurture and use it. Embrace your unique talents, and let them guide you toward your true purpose.",
+        timestamp: "20 Dec"
+    },
+    {
+        id: "vid31",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/31.mp4",
+        caption: "If you don't feel like the person you want to be, pretend! Just pretend first. Act as if you already are, and soon enough, your actions will shape you into the person you aspire to become.",
+        timestamp: "22 Dec"
+    },
+    {
+        id: "vid32",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/32.mp4",
+        caption: "Friendly reminder: Don't waste your life. Time is precious—pursue what excites you, invest in what matters, and make every moment count.",
+        timestamp: "24 Dec"
+    },
+    {
+        id: "vid33",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/33.mp4",
+        caption: "Feeling overwhelmed? Grab a piece of paper and write your priorities straight. Clarity comes when you put your thoughts on paper, helping you focus on what truly matters and ease the stress.",
+        timestamp: "26 Dec"
+    },
+    {
+        id: "vid34",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/34.mp4",
+        caption: "If you're feeling unfocused, go for a run.",
+        timestamp: "27 Dec"
+    },
+    {
+        id: "vid35",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/35.mp4",
+        caption: "You are not bored, you are distracted.",
+        timestamp: "28 Dec"
+    },
+    {
+        id: "vid36",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/36.mp4",
+        caption: "You're three decisions away...",
+        timestamp: "29 Dec"
+    },
+    {
+        id: "vid37",
+        url: "https://xopymfulxtphdthvfssh.supabase.co/storage/v1/object/public/myvideo/YouBuddy%20videos/37.mp4",
+        caption: "See how easy peace becomes when you no longer have the energy to argue, and you're okay with being misunderstood. Letting go of the need to prove yourself frees your mind and brings a deep sense of calm",
+        timestamp: "30 Dec"
+    }
+];
+
+// Add this new const for MCQs
+const mcqs = [
+  {
+    id: "mcq-1",
+    question: "Look at this series: 12, 11, 13, 12, 14, 13, … What number should come next?",
+    options: [
+      { text: "10", isCorrect: false },
+      { text: "16", isCorrect: false },
+      { text: "13", isCorrect: false },
+      { text: "15", isCorrect: true }
+    ],
+    explanation: "This is an alternating number of subtraction series. First, 1 is subtracted, then 2 is added."
+  },
+  {
+    id: "mcq-2",
+    question: "Look at this series: 36, 34, 30, 28, 24, … What number should come next?",
+    options: [
+      { text: "22", isCorrect: true },
+      { text: "26", isCorrect: false },
+      { text: "23", isCorrect: false },
+      { text: "20", isCorrect: false }
+    ],
+    explanation: "This is an alternating number of subtraction series. First, 2 is subtracted, then 4, then 2, and so on."
+  },
+  {
+    id: "mcq-3",
+    question: "Look at this series: 7, 10, 8, 11, 9, 12, … What number should come next?",
+    options: [
+      { text: "7", isCorrect: false },
+      { text: "12", isCorrect: false },
+      { text: "10", isCorrect: true },
+      { text: "13", isCorrect: false }
+    ],
+    explanation: "Its an alternating addition and subtraction series. 3 is added in the first pattern, and then 2 is subtracted."
+  },
+  {
+    id: "mcq-4",
+    question: "Look at this series: 2, 1, (1/2), (1/4), … What number should come next?",
+    options: [
+      { text: "(1/3)", isCorrect: false },
+      { text: "(1/8)", isCorrect: true },
+      { text: "(2/8)", isCorrect: false },
+      { text: "(1/16)", isCorrect: false }
+    ],
+    explanation: "It's a division series. Every number is half of the previous number."
+  },
+  {
+    id: "mcq-5",
+    question: "Look at this series: 80, 10, 70, 15, 60, … What number should come next?",
+    options: [
+      { text: "20", isCorrect: true },
+      { text: "25", isCorrect: false },
+      { text: "30", isCorrect: false },
+      { text: "50", isCorrect: false }
+    ],
+    explanation: "This is an alternating addition and subtraction series. In the first pattern, 10 is subtracted from each number to arrive at the next. In the second, 5 is added."
+  },
+  {
+    id: "mcq-6",
+    question: "Which word does NOT belong with the others?",
+    options: [
+      { text: "index", isCorrect: false },
+      { text: "glossary", isCorrect: false },
+      { text: "chapter", isCorrect: false },
+      { text: "book", isCorrect: true }
+    ],
+    explanation: "Book. Rest are all parts of a book."
+  },
+  {
+    id: "mcq-7",
+    question: "Which word is the odd man out?",
+    options: [
+      { text: "trivial", isCorrect: false },
+      { text: "unimportant", isCorrect: false },
+      { text: "important", isCorrect: true },
+      { text: "insignificant", isCorrect: false }
+    ],
+    explanation: "Important. Remaining are synonyms of each other."
+  },
+  {
+    id: "mcq-8",
+    question: "Which word does NOT belong with the others?",
+    options: [
+      { text: "wing", isCorrect: false },
+      { text: "fin", isCorrect: false },
+      { text: "beak", isCorrect: true },
+      { text: "rudder", isCorrect: false }
+    ],
+    explanation: "Beak. Rest are parts of an aero plane."
+  },
+  {
+    id: "mcq-9",
+    question: "Which word is the odd man out?",
+    options: [
+      { text: "hate", isCorrect: true },
+      { text: "fondness", isCorrect: false },
+      { text: "liking", isCorrect: false },
+      { text: "attachment", isCorrect: false }
+    ],
+    explanation: "Hate. Rest are positive emotions."
+  },
+  {
+    id: "mcq-10",
+    question: "Pick the odd man out?",
+    options: [
+      { text: "just", isCorrect: false },
+      { text: "fair", isCorrect: false },
+      { text: "equitable", isCorrect: false },
+      { text: "biased", isCorrect: true }
+    ],
+    explanation: "Biased. The others signify honesty."
+  },
+  {
+    id: "mcq-11",
+    question: "CUP : LIP :: BIRD : ?",
+    options: [
+      { text: "GRASS", isCorrect: false },
+      { text: "FOREST", isCorrect: false },
+      { text: "BEAK", isCorrect: true },
+      { text: "BUSH", isCorrect: false }
+    ],
+    explanation: "BEAK. You drink out of a cup with your lips. Similarly, birds bite grass with their beaks."
+  },
+  {
+    id: "mcq-12",
+    question: "Paw : Cat :: Hoof : ?",
+    options: [
+      { text: "Lamb", isCorrect: false },
+      { text: "Horse", isCorrect: true },
+      { text: "Elephant", isCorrect: false },
+      { text: "Tiger", isCorrect: false }
+    ],
+    explanation: "Horse. Cat's feet are called paws and horse's are called hoofs."
+  },
+  {
+    id: "mcq-13",
+    question: "Safe : Secure :: Protect :",
+    options: [
+      { text: "Lock", isCorrect: false },
+      { text: "Guard", isCorrect: true },
+      { text: "Sure", isCorrect: false },
+      { text: "Conserve", isCorrect: false }
+    ],
+    explanation: "Guard is the correct analogy as it relates to protection like secure relates to safe."
+  },
+  {
+    id: "mcq-14",
+    question: "Melt : Liquid :: Freeze :",
+    options: [
+      { text: "Ice", isCorrect: false },
+      { text: "Solid", isCorrect: true },
+      { text: "Condense", isCorrect: false },
+      { text: "Push", isCorrect: false }
+    ],
+    explanation: "Solid. As melt leads to liquid state, freeze leads to solid state."
+  },
+  {
+    id: "mcq-15",
+    question: "Parts : Strap :: Wolf :",
+    options: [
+      { text: "Flow", isCorrect: true },
+      { text: "Animal", isCorrect: false },
+      { text: "Wood", isCorrect: false },
+      { text: "Fox", isCorrect: false }
+    ],
+    explanation: "Flow is the correct answer following the pattern."
+  },
+  {
+    id: "mcq-16",
+    question: "Which situation below is the best example of an Informal Gathering?",
+    options: [
+      { text: "A debating club meets on the first Sunday morning of every month.", isCorrect: false },
+      { text: "After finding out about his salary raise, Jay and a few colleagues go out for a quick dinner after work.", isCorrect: true },
+      { text: "Meena sends out 10 invitations for a bachelorette party she is giving for her elder sister.", isCorrect: false },
+      { text: "Whenever she eats at a Chinese restaurant, Roop seems to run into Dibya.", isCorrect: false }
+    ],
+    explanation: "Jay's dinner with colleagues is informal and spontaneous, making it the best example of an informal gathering."
+  },
+  {
+    id: "mcq-1",
+    question: "Which of the following is not a twin prime?",
+    options: [
+      { text: "3,5", isCorrect: false },
+      { text: "11,13", isCorrect: false },
+      { text: "17,19", isCorrect: false },
+      { text: "13,17", isCorrect: true }
+    ],
+    explanation: "Two prime numbers whose difference is 2 are called twin primes. In the given options, 17 – 13 ≠ 2, hence it is not a twin prime."
+  },
+  {
+    id: "mcq-2",
+    question: "Which of the following is a prime number?",
+    options: [
+      { text: "571", isCorrect: true },
+      { text: "517", isCorrect: false },
+      { text: "533", isCorrect: false },
+      { text: "559", isCorrect: false }
+    ],
+    explanation: "We know that, (24)² > 571,517,533,559. Prime numbers less than 24 are 2, 3, 5, 7, 11, 13, 17, 19, 23. 517 is divisible by 11. 533 and 559 are divisible by 13. Clearly, none of them divides 571. Hence, it is a prime number."
+  },
+  {
+    id: "mcq-3",
+    question: "In which of the following case, the two numbers are co-prime?",
+    options: [
+      { text: "Two consecutive even number", isCorrect: false },
+      { text: "Two composite number", isCorrect: false },
+      { text: "Two consecutive odd integers", isCorrect: false },
+      { text: "Two consecutive odd numbers", isCorrect: true }
+    ],
+    explanation: "Two consecutive odd numbers are always co-prime, because they do not have any common factors except 1."
+  },
+  {
+    id: "mcq-4",
+    question: "In which of the following case, the two numbers are co-prime?",
+    options: [
+      { text: "Three consecutive natural numbers", isCorrect: false },
+      { text: "Two prime and one composite number", isCorrect: false },
+      { text: "Three consecutive natural numbers with first one being even", isCorrect: false },
+      { text: "Three consecutive natural numbers with first one being odd", isCorrect: true }
+    ],
+    explanation: "Three consecutive natural numbers with first one being odd are always co-prime because there is no common factors in between them."
+  },
+  {
+    id: "mcq-5",
+    question: "How many prime numbers are less than 70?",
+    options: [
+      { text: "16", isCorrect: false },
+      { text: "19", isCorrect: true },
+      { text: "20", isCorrect: false },
+      { text: "18", isCorrect: false }
+    ],
+    explanation: "Prime numbers less than 70 are, 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67. Hence, the number of prime numbers less than 70 is 19."
+  },
+  {
+    id: "mcq-6",
+    question: "Which of the following is not a prime number?",
+    options: [
+      { text: "233", isCorrect: false },
+      { text: "251", isCorrect: false },
+      { text: "241", isCorrect: false },
+      { text: "259", isCorrect: true }
+    ],
+    explanation: "16² > 233,251,241,237. Prime numbers less than 16 are 2,3,5,7,11,13. 233, 251 and 241 are not divisible by any of these numbers. Hence these are prime numbers. But, 259 is divisible by 7. Hence, it is not a prime number."
+  },
+  {
+    id: "mcq-7",
+    question: "Which is the smallest prime number?",
+    options: [
+      { text: "1", isCorrect: false },
+      { text: "2", isCorrect: true },
+      { text: "3", isCorrect: false },
+      { text: "4", isCorrect: false }
+    ],
+    explanation: "We know that 1 is neither prime nor composite. Hence the smallest prime number is 2."
+  },
+  {
+    id: "mcq-8",
+    question: "Which is the smallest odd prime number?",
+    options: [
+      { text: "1", isCorrect: false },
+      { text: "5", isCorrect: false },
+      { text: "3", isCorrect: true },
+      { text: "7", isCorrect: false }
+    ],
+    explanation: "We know that 1 is neither prime nor composite. Hence the smallest odd prime number is 3."
+  },
+  {
+    id: "mcq-9",
+    question: "Find the sum of all 2-digit prime numbers.",
+    options: [
+      { text: "1043", isCorrect: true },
+      { text: "1100", isCorrect: false },
+      { text: "1187", isCorrect: false },
+      { text: "1130", isCorrect: false }
+    ],
+    explanation: "11+13+17+19+23+29+31+37+41+43+47+53+59+61+67+71+73+79+83+89+97 = 1043."
+  },
+  {
+    id: "mcq-10",
+    question: "Consider the following statements. I. To obtain prime numbers less than 256, we are to reject all the multiples of 2, 3, 5, 7, 11 and 13. II. Every composite number less than 256 is divisible by a prime number less than 16. Which of the statement(s)given above is/are correct?",
+    options: [
+      { text: "Only I", isCorrect: false },
+      { text: "Only II", isCorrect: false },
+      { text: "Both I & II", isCorrect: true },
+      { text: "Neither I nor II", isCorrect: false }
+    ],
+    explanation: "As 256 is the square of 16. So, as to obtain prime numbers less than 256, we reject all multiples of prime numbers less than 16 i.e., 2, 3, 5, 7, 11 and 13. Similarly, every composite number less than 256 is divisible by a prime number less than 16 i.e., 2, 3, 5, 7, 11 and 13. Hence, both the statements given are correct."
+  },
+
+
+
+  {
+    id: "mcq-1",
+    question: "B is twice as old as A. C is twice as old as B. If the difference between ages of A and C is 12 years, find the age of B.",
+    options: [
+      { text: "8 years", isCorrect: true },
+      { text: "7 years", isCorrect: false },
+      { text: "6 years", isCorrect: false },
+      { text: "5 years", isCorrect: false }
+    ],
+    explanation: "Let the ages of A, B and C be x, y and z. Y = 2x, z = 2y, therefore Z = 4x. Difference between ages of x and z = 12 years. 4x – x = 12 years, 3x = 12 years, x = 4 years. Therefore, Y = 2x = 2 * 4 = 8 years"
+  },
+  {
+    id: "mcq-2",
+    question: "P is thrice as old as Q. The difference between the ages of P and Q is a multiple of 9. Find the minimum possible age of P, if it is known that Q's age is an odd prime number.",
+    options: [
+      { text: "9 years", isCorrect: false },
+      { text: "10 years", isCorrect: false },
+      { text: "11 years", isCorrect: false },
+      { text: "12 years", isCorrect: true }
+    ],
+    explanation: "Let the age of P and Q be x and y. The minimum possible age of Q can be 3 as the age is a prime number and an odd number. The minimum difference between their ages can be 9 as the number should be a multiple of 9. P's minimum possible age can be Q's minimum possible age + minimum possible difference. 3 + 9 = 12 years"
+  },
+  {
+    id: "mcq-3",
+    question: "The sum of ages of 2 brothers is 45 years. If their ages are in a ratio 4:5, find their ages after 10 years.",
+    options: [
+      { text: "15, 30 years", isCorrect: false },
+      { text: "20, 25 years", isCorrect: false },
+      { text: "30, 35 years", isCorrect: true },
+      { text: "22, 23 years", isCorrect: false }
+    ],
+    explanation: "Let their ages be x and y. X:y = 4:5, so x/4 = y/5. Therefore 5x = 4y and x + y = 45. From these equations, x = 20 years, y = 25 years. After 10 years: x = 20 + 10 = 30 years, y = 25 + 10 = 35 years"
+  },
+  {
+    id: "mcq-4",
+    question: "Ram and Raju are cousins. If it is known that Ram is 30 years younger than Raju and the ratio of their ages is 28:7. Find their ages after 5 years.",
+    options: [
+      { text: "20, 50", isCorrect: false },
+      { text: "30, 60", isCorrect: false },
+      { text: "45, 15", isCorrect: true },
+      { text: "15, 45", isCorrect: false }
+    ],
+    explanation: "Let their ages be x and y. X:y = 28:7, so x/28 = y/7. Therefore 7x = 28y, x = 4y. Difference is 30 years, so x - y = 4y - y = 30. Therefore 3y = 30, y = 10, x = 40. After 5 years: x = 45, y = 15"
+  },
+  {
+    id: "mcq-5",
+    question: "X's age is 20% more than Y's age. If the sum of their ages if 20 more than the difference of their ages, find their respective ages.",
+    options: [
+      { text: "12, 10", isCorrect: true },
+      { text: "18, 15", isCorrect: false },
+      { text: "24, 20", isCorrect: false },
+      { text: "30, 25", isCorrect: false }
+    ],
+    explanation: "Let the ages of X and Y be p and q. P = q + 20% of q. (P + q) – (p – q) = 20. 2q = 20, so q = 10. Y's age = 10 years. X's age is 20% more than Y's age: 10 + 20% of 10 = 10 + 2 = 12. Their ages are 12, 10."
+  },
+  {
+    id: "mcq-6",
+    question: "Out of 3 friends one is 12 years old. The ratio of the ages of the other 2 friends a and b is 3:4. If the youngest among them is 12 years old, find the minimum possible age of the eldest friend.",
+    options: [
+      { text: "25", isCorrect: false },
+      { text: "30", isCorrect: false },
+      { text: "35", isCorrect: false },
+      { text: "40", isCorrect: true }
+    ],
+    explanation: "First friend is 12 years old and also the youngest. Two friends could be 12 years old, one being first mentioned and other being a. So a = 12 years. For ratio a:b = 3:4, b = 12/3 * 4 = 16 years. Total age = 12 + 12 + 16 = 40"
+  },
+  {
+    id: "mcq-7",
+    question: "A branch of a company have 2 employees m and n. If it is known that the ages of m and n are in a ratio 3:12, and the sum of their ages is 7 years and 6 months. Find the age of n.",
+    options: [
+      { text: "5 years", isCorrect: false },
+      { text: "5.5 years", isCorrect: false },
+      { text: "6 years", isCorrect: true },
+      { text: "6.5 years", isCorrect: false }
+    ],
+    explanation: "7 years and 6 months = 90 months. Ratio 3:12 means 12m = 3n, so 4m = n. m + 4m = 90, so 5m = 90, m = 18. n = 4m = 72 months = 6 years"
+  },
+  {
+    id: "mcq-8",
+    question: "A and B are sisters born after the year 2010. If the sum of their ages will be 19 in the year 2025, What will be the age of A in 2030. It is known that in the year 2024 the ratio of their age is 7:10.",
+    options: [
+      { text: "12", isCorrect: false },
+      { text: "13", isCorrect: true },
+      { text: "14", isCorrect: false },
+      { text: "16", isCorrect: false }
+    ],
+    explanation: "Sum in 2024 = 19 - 2 = 17. Ratio 7:10 means 10a = 7b and a + b = 17. Solving gives b = 10, a = 7 in 2024. Age of A in 2030 = 7 + 6 = 13"
+  },
+  {
+    id: "mcq-9",
+    question: "The sum of ages of 2 friends A and B is 42. If the ratio between the sum and difference of their ages is 2:1, find the age of A.",
+    options: [
+      { text: "31.5", isCorrect: true },
+      { text: "32.5", isCorrect: false },
+      { text: "33.5", isCorrect: false },
+      { text: "34.5", isCorrect: false }
+    ],
+    explanation: "Let ages be x and y. (x + y):(x – y) = 2:1 means x + y = 2(x – y), so 3y = x. With x + y = 42, we get 4y = 42, y = 10.5, x = 31.5"
+  },
+  {
+    id: "mcq-10",
+    question: "If 2 members of a family are in a ratio 3:12, and the average of their ages is 35. Find the total of their ages after 11 years.",
+    options: [
+      { text: "81 years", isCorrect: false },
+      { text: "92 years", isCorrect: true },
+      { text: "102 years", isCorrect: false },
+      { text: "89 years", isCorrect: false }
+    ],
+    explanation: "Average = 35, so total = 70 years. Ratio 3:12 = 1:4, so if x is youngest, 6x + x = 70, 7x = 70, x = 10. Ages are 10 and 60. After 11 years: (10 + 11) + (60 + 11) = 21 + 71 = 92 years"
+  },
+  
+    {
+      id: "mcq-1",
+      question: "Find the odd one out from the given set of numbers: 14, 28, 35, 46, 56, 84",
+      options: [
+        { "text": "56", "isCorrect": false },
+        { "text": "84", "isCorrect": false },
+        { "text": "35", "isCorrect": false },
+        { "text": "46", "isCorrect": true }
+      ],
+      explanation: "The numbers 14, 28, 35, 56 and 84 are perfectly divisible by 7 (14÷7=2, 28÷7=4, 35÷7=5, 56÷7=8, 84÷7=12). But 46 is not perfectly divisible by 7 (not a multiple of 7)."
+    },
+    {
+      "id": "mcq-2",
+      "question": "Find odd one out from the given jumbled words: LNUAIMMIU, ELEST, OPERPC, NMKOYE, INCKLE",
+      "options": [
+        { "text": "NMKOYE", "isCorrect": true },
+        { "text": "OPERPC", "isCorrect": false },
+        { "text": "INCKLE", "isCorrect": false },
+        { "text": "ELEST", "isCorrect": false }
+      ],
+      "explanation": "The rearrangement of words: LNUAIMMIU→ALUMINIUM, ELEST→STEEL, OPERPC→COPPER, NMKOYE→MONKEY, INCKLE→NICKLE. MONKEY is odd as all others are names of elements that exist in nature."
+    },
+    {
+      "id": "mcq-3",
+      "question": "Find the odd one out: BEK, CFL, MPS, GJP",
+      "options": [
+        { "text": "BEK", "isCorrect": false },
+        { "text": "CFL", "isCorrect": false },
+        { "text": "MPS", "isCorrect": true },
+        { "text": "GJP", "isCorrect": false }
+      ],
+      "explanation": "Letters follow pattern: C+3→F+6→L, B+3→E+6→K, G+3→J+6→P. MPS doesn't follow this pattern (M+3→P+3→S)."
+    },
+    {
+      "id": "mcq-4",
+      "question": "Find the odd one out: M, S, T, O",
+      "options": [
+        { "text": "M", "isCorrect": false },
+        { "text": "S", "isCorrect": true },
+        { "text": "T", "isCorrect": false },
+        { "text": "O", "isCorrect": false }
+      ],
+      "explanation": "Letters M, O and T have exactly same mirror images (M|M, O|O, T|T). But letter S has inverted mirror image (S|Ꙅ)."
+    },
+    {
+      "id": "mcq-5",
+      "question": "In a certain code 'CODE' is written as 'DPEF'. How is 'DEFENCE' written in that code?",
+      "options": [
+        { "text": "KWMCJFL", "isCorrect": false },
+        { "text": "ELDFSAP", "isCorrect": false },
+        { "text": "EFGFODF", "isCorrect": true },
+        { "text": "HRAOSCV", "isCorrect": false }
+      ],
+      "explanation": "Each letter moves +1 from its original position. For 'CODE': C→D, O→P, D→E, E→F. Similarly, for 'DEFENCE' the code is EFGFODF."
+    },
+    {
+      "id": "mcq-6",
+      "question": "In a certain code '564' means 'study very hard', '736' means 'hard work pays' and '423' means 'study and work'. Which is the code for 'work'?",
+      "options": [
+        { "text": "5", "isCorrect": false },
+        { "text": "3", "isCorrect": true },
+        { "text": "6", "isCorrect": false },
+        { "text": "4", "isCorrect": false }
+      ],
+      "explanation": "Common code '6' and word 'hard' in first and second statements. Common code '3' and word 'work' in second and third statements. Common code '4' and word 'study' in first and third statements. Therefore, 3→work, 4→study, 6→hard."
+    },
+    {
+      "id": "mcq-7",
+      "question": "If 'white' is called 'yellow', 'yellow' is called 'blue', 'blue' is called 'red', 'red' is called 'black', 'black' is called 'violet' and 'violet' is called 'green', what would be the colour of light emitting from bulb?",
+      "options": [
+        { "text": "Blue", "isCorrect": true },
+        { "text": "Red", "isCorrect": false },
+        { "text": "Yellow", "isCorrect": false },
+        { "text": "Black", "isCorrect": false }
+      ],
+      "explanation": "The colour of light emitting from bulb is yellow and 'yellow' is called 'blue'."
+    },
+    {
+      "id": "mcq-8",
+      "question": "If the letters of the word 'PRODUCT' are arranged alphabetically, then which letter would be farthest from the second letter of word?",
+      "options": [
+        { "text": "T", "isCorrect": false },
+        { "text": "R", "isCorrect": false },
+        { "text": "U", "isCorrect": true },
+        { "text": "P", "isCorrect": false }
+      ],
+      "explanation": "When arranged alphabetically the word is CDOPRTU."
+    },
+    {
+      "id": "mcq-9",
+      "question": "Milly introduced a boy as the son of the only daughter of the mother of her maternal uncle. How is Milly related to that boy?",
+      "options": [
+        { "text": "Nephew", "isCorrect": false },
+        { "text": "Son", "isCorrect": false },
+        { "text": "Brother", "isCorrect": false },
+        { "text": "Sister", "isCorrect": true }
+      ],
+      "explanation": "The boy's mother is the only daughter of her mother, who is also the mother of Milly's maternal uncle i.e. the boy's mother and Milly's mother are same i.e. Milly and the boy are siblings."
+    },
+    {
+      "id": "mcq-10",
+      "question": "If 'A&B' means A is father of B, 'A*B' means A is brother of B, 'A$B' means A is mother of B then which of the following is correct about K$T&M?",
+      "options": [
+        { "text": "M is brother of T", "isCorrect": false },
+        { "text": "T is son of K", "isCorrect": true },
+        { "text": "M is father of T", "isCorrect": false },
+        { "text": "K is mother of M", "isCorrect": false }
+      ],
+      "explanation": "K$T means K is mother of T and T&M means T is father of M. So, T is son of K."
+    },
+    {
+      "id": "mcq-11",
+      "question": "Kalyan is brother of Salman. Dhriti is sister of Atharv and daughter of Suchitra. Saloni is wife of Kalyan and is sister of Suchitra. How is Saloni related to Atharv?",
+      "options": [
+        { "text": "Aunt", "isCorrect": true },
+        { "text": "Grandmother", "isCorrect": false },
+        { "text": "Mother", "isCorrect": false },
+        { "text": "Daughter", "isCorrect": false }
+      ],
+      "explanation": "Suchitra is sister of Saloni and Atharv is son of Suchitra. So, Saloni is his aunt."
+    },
+    {
+      "id": "mcq-12",
+      "question": "BFNM : EIQP :: RBGJ : ?",
+      "options": [
+        { "text": "GHJK", "isCorrect": false },
+        { "text": "WXYZ", "isCorrect": false },
+        { "text": "UEJM", "isCorrect": true },
+        { "text": "ABCD", "isCorrect": false }
+      ],
+      "explanation": "Each letter of the first group moves 3 steps forward to obtain the corresponding letter of the second group. B+3→E, F+3→I, N+3→Q, M+3→P."
+    },
+    {
+      "id": "mcq-13",
+      "question": "S and K are brothers. W is mother of S. M is mother of T. If T is son of K, then how is W related to M?",
+      "options": [
+        { "text": "Mother-in-law", "isCorrect": true },
+        { "text": "Sister", "isCorrect": false },
+        { "text": "Father-in-law", "isCorrect": false },
+        { "text": "Mother", "isCorrect": false }
+      ],
+      "explanation": "W is mother of S and S is brother of K and M is wife of K. So, W is M's mother-in-law."
+    },
+    {
+      "id": "mcq-14",
+      "question": "Hardworking : Determined :: Happy : ?",
+      "options": [
+        { "text": "Sad", "isCorrect": false },
+        { "text": "Upbeat", "isCorrect": true },
+        { "text": "Lovely", "isCorrect": false },
+        { "text": "Hilarious", "isCorrect": false }
+      ],
+      "explanation": "From analyzing the left side, determined is the synonym of hardworking. By the same logic, upbeat is the synonym of happy."
+    },
+    {
+      "id": "mcq-15",
+      "question": "343 : 7 :: 512 : ?",
+      "options": [
+        { "text": "9", "isCorrect": false },
+        { "text": "6", "isCorrect": false },
+        { "text": "8", "isCorrect": true },
+        { "text": "2", "isCorrect": false }
+      ],
+      "explanation": "343 is the cube of 7. By the same logic, 512 is the cube of 8."
+    },
+    {
+      "id": "mcq-16",
+      "question": "Good : Ample :: Droll : ?",
+      "options": [
+        { "text": "Corpulent", "isCorrect": false },
+        { "text": "Quiet", "isCorrect": false },
+        { "text": "Recede", "isCorrect": false },
+        { "text": "Humorous", "isCorrect": true }
+      ],
+      "explanation": "Good is synonym of Ample. By the same logic, Droll is synonym of Humorous."
+    },
+    {
+      "id": "mcq-19",
+      "question": "Find the next number in the series : 61, 52, 63, 94, 46, .... ?",
+      "options": [
+        { "text": "81", "isCorrect": false },
+        { "text": "18", "isCorrect": true },
+        { "text": "49", "isCorrect": false },
+        { "text": "35", "isCorrect": false }
+      ],
+      "explanation": "Each number is reverse of a number which is square of a number. 42=16→61, 52=25→52, 62=36→63, 72=49→94, 82=64→46. So, next number will be 92=81→18."
+    },
+    {
+      "id": "mcq-20",
+      "question": "In a row of 26 girls, when Sakshi shifted four places towards the left, she become 10th from the left end. What was her earlier position form the right end of the row?",
+      "options": [
+        { "text": "10th", "isCorrect": false },
+        { "text": "11th", "isCorrect": false },
+        { "text": "13th", "isCorrect": true },
+        { "text": "12th", "isCorrect": false }
+      ],
+      "explanation": "There are 26 girls and Sakshi is in 10th position from left end after shifting. i.e. Sakshi is in 14th position from left before shifting. So 26 – 14 = 12 i.e. there are 12 girls before Sakshi, so her position was 13th from the right end."
+    },
+    {
+      "id": "mcq-22",
+      "question": "Identify the wrong number in the series. 0, 1, 1, 2, 3, 5, 8, 13, 20, 34?",
+      "options": [
+        { "text": "8", "isCorrect": false },
+        { "text": "20", "isCorrect": true },
+        { "text": "13", "isCorrect": false },
+        { "text": "34", "isCorrect": false }
+      ],
+      "explanation": "The series is a Fibonacci series where a number is the sum of previous two numbers. 8+13=21, so 20 is wrong."
+    },
+    {
+      "id": "mcq-23",
+      "question": "Complete the following series 6, 12, 36, 144, 720...?",
+      "options": [
+        { "text": "4320", "isCorrect": true },
+        { "text": "2843", "isCorrect": false },
+        { "text": "8249", "isCorrect": false },
+        { "text": "6825", "isCorrect": false }
+      ],
+      "explanation": "Series follows pattern: 6×2=12, 12×3=36, 36×4=144, 144×5=720. Similarly, 720×6=4320."
+    },
+    {
+      "id": "mcq-24",
+      "question": "A box had 17 bulbs. All but five are fused. How many are actually fused?",
+      "options": [
+        { "text": "9", "isCorrect": false },
+        { "text": "8", "isCorrect": false },
+        { "text": "12", "isCorrect": true },
+        { "text": "5", "isCorrect": false }
+      ],
+      "explanation": "All bulbs are fused except 5 i.e. out of 17, 12 bulbs are fused."
+    },
+
+    {
+      "id": "mcq-25",
+      "question": "Find the odd one out: GOM, NSR, BJH, EMK",
+      "options": [
+        { "text": "GOM", "isCorrect": false },
+        { "text": "NSR", "isCorrect": true },
+        { "text": "BJH", "isCorrect": false },
+        { "text": "EMK", "isCorrect": false }
+      ],
+      "explanation": "Letters follow pattern: B+8→J-2→H, E+8→M-2→K, G+8→O-2→M. But NSR doesn't follow this pattern (N+5→S-1→R)."
+    },
+    {
+      "id": "mcq-26",
+      "question": "Deepa's younger brother Bobby is older than Hitika. Shweta is younger than Nilesh but elder than Deepa. If Nilesh is younger than Shyam then who is the youngest?",
+      "options": [
+        { "text": "Shyam", "isCorrect": false },
+        { "text": "Nilesh", "isCorrect": false },
+        { "text": "Bobby", "isCorrect": false },
+        { "text": "Hitika", "isCorrect": true }
+      ],
+      "explanation": "According to question: Hitika < Bobby < Deepa < Shweta < Nilesh < Shyam. Therefore, the youngest is Hitika."
+    },
+    {
+      "id": "mcq-30",
+      "question": "A cage had 15 birds. All but seven manages to escape. How many birds remain?",
+      "options": [
+        { "text": "8", "isCorrect": false },
+        { "text": "9", "isCorrect": false },
+        { "text": "3", "isCorrect": false },
+        { "text": "7", "isCorrect": true }
+      ],
+      "explanation": "All birds escape except 7 birds i.e. out of 15, 7 birds remain."
+    },
+    {
+      "id": "mcq-31",
+      "question": "Identify the missing number in the series. 8, 13, 21, 34, 55, ?, 144?",
+      "options": [
+        { "text": "55", "isCorrect": false },
+        { "text": "13", "isCorrect": false },
+        { "text": "89", "isCorrect": true },
+        { "text": "21", "isCorrect": false }
+      ],
+      "explanation": "The series is a Fibonacci series where a number is the sum of previous two numbers. Missing number is 34+55=89."
+    },
+    {
+      "id": "mcq-32",
+      "question": "Beautiful : Repulsive :: Frequent : ?",
+      "options": [
+        { "text": "Seldom", "isCorrect": true },
+        { "text": "Wise", "isCorrect": false },
+        { "text": "Fast", "isCorrect": false },
+        { "text": "Apparent", "isCorrect": false }
+      ],
+      "explanation": "Repulsive is antonym of Beautiful. By the same logic, Frequent is antonym of Seldom."
+    },
+    {
+      "id": "mcq-33",
+      "question": "K is the son of A's mother's sister. Q is daughter of D, who is the father of G and grandfather of A. P is the Daughter of H who is grandmother of K. D is husband of H and G is husband of L. How is P related to Q?",
+      "options": [
+        { "text": "Cousin", "isCorrect": false },
+        { "text": "Daughter", "isCorrect": false },
+        { "text": "Sister", "isCorrect": true },
+        { "text": "Mother", "isCorrect": false }
+      ],
+      "explanation": "H is wife of D. P and Q are daughters of H and D. So, P is sister of Q."
+    },
+    {
+      "id": "mcq-34",
+      "question": "In a certain code 'CLOUD' is written as 'ENQWF'. How 'CRACK' is written in that code?",
+      "options": [
+        { "text": "SPUPSR", "isCorrect": false },
+        { "text": "ETCEM", "isCorrect": true },
+        { "text": "ESAPTO", "isCorrect": false },
+        { "text": "NJELVP", "isCorrect": false }
+      ],
+      "explanation": "Each letter moves +2 from its original position. For 'CLOUD': C→E, L→N, O→Q, U→W, D→F. Similarly, for 'CRACK' the code is ETCEM."
+    },
+    {
+      "id": "mcq-35",
+      "question": "Find the odd one out: 2361–2181, 1247–1067, 7258–7124, 3429–3249",
+      "options": [
+        { "text": "2361–2181", "isCorrect": false },
+        { "text": "1247–1067", "isCorrect": false },
+        { "text": "7258–7124", "isCorrect": true },
+        { "text": "3429–3249", "isCorrect": false }
+      ],
+      "explanation": "In all pairs, the second number is 180 less than the first number (1247-180=1067, 2361-180=2181, 3429-180=3249). But 7258–180≠7124."
+    },
+    {
+      "id": "mcq-36",
+      "question": "Find the odd one out from the given data: 724, 343, 216, 27",
+      "options": [
+        { "text": "724", "isCorrect": true },
+        { "text": "343", "isCorrect": false },
+        { "text": "216", "isCorrect": false },
+        { "text": "27", "isCorrect": false }
+      ],
+      "explanation": "Numbers 27, 216 and 343 are perfect cubes (33=27, 63=216, 73=343). But 724 is not a perfect cube."
+    },
+    {
+      "id": "mcq-37",
+      "question": "Pointing towards a person a woman said to man, 'His father is the only son of your mother'. How is the man related to that person?",
+      "options": [
+        { "text": "Husband", "isCorrect": false },
+        { "text": "Son", "isCorrect": false },
+        { "text": "Father", "isCorrect": true },
+        { "text": "Brother", "isCorrect": false }
+      ],
+      "explanation": "The man's mother has only one son i.e. the man himself, who is also the father of that person. So, it is clear that the man is the father of that person."
+    },
+    {
+      "id": "mcq-38",
+      "question": "A, B, C, D, E, F and G are members of a family consisting of four adults and three children, two of whom, F and G are boys. A and D are brothers and A is an engineer. E is a doctor married to one of the brothers and has two children. B is married to D and G is their child. Who is C?",
+      "options": [
+        { "text": "A's son", "isCorrect": false },
+        { "text": "E's daughter", "isCorrect": true },
+        { "text": "F's father", "isCorrect": false },
+        { "text": "G's father", "isCorrect": false }
+      ],
+      "explanation": "C, F and G are children and F and G are boys i.e. C is a girl. Since, B married to D and G is their child, therefore, E married to A and C and F are their children."
+    },
+    {
+      "id": "mcq-39",
+      "question": "ADLK : CFNM :: GRSP : ?",
+      "options": [
+        { "text": "WXYZ", "isCorrect": false },
+        { "text": "GHJK", "isCorrect": false },
+        { "text": "ABCD", "isCorrect": false },
+        { "text": "ITUR", "isCorrect": true }
+      ],
+      "explanation": "Each letter of the first group moves 2 steps forward to obtain the corresponding letter of the second group. A+2→C, D+2→F, L+2→N, K+2→M."
+    },
+    {
+      "id": "mcq-40",
+      "question": "How many even numbers are there in the following series of numbers, each of which is immediately preceded by an odd number, but not immediately followed by an even number? 6 2 8 9 1 3 4 5 7 5 8 9 7 9 10 8 1 4 9 2 6",
+      "options": [
+        { "text": "4", "isCorrect": false },
+        { "text": "3", "isCorrect": true },
+        { "text": "2", "isCorrect": false },
+        { "text": "1", "isCorrect": false }
+      ],
+      "explanation": "Looking for group of numbers i.e. odd even odd. In the series it occurs thrice: '1 4 9', '3 4 5', '5 8 9'."
+    },
+    {
+      "id": "mcq-41",
+      "question": "Ankita's younger brother Bobby is older than Nilu. Shweta is younger than Rahul but elder than Ankita. Who is the eldest?",
+      "options": [
+        { "text": "Rahul", "isCorrect": true },
+        { "text": "Shweta", "isCorrect": false },
+        { "text": "Ankita", "isCorrect": false },
+        { "text": "Bobby", "isCorrect": false }
+      ],
+      "explanation": "According to question: Nilu < Bobby < Ankita < Shweta < Rahul. Therefore, the eldest is Rahul."
+    },
+  {
+    "id": "mcq-1",
+    "question": "What is the capital of Andhra Pradesh?",
+    "options": [
+      { "text": "Vishakhapatnam", "isCorrect": false },
+      { "text": "Amaravati", "isCorrect": true },
+      { "text": "Tirupati", "isCorrect": false },
+      { "text": "Guntur", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Amaravati, which is the capital of Andhra Pradesh."
+  },
+  {
+    "id": "mcq-2",
+    "question": "What is the capital of Arunachal Pradesh?",
+    "options": [
+      { "text": "Itanagar", "isCorrect": true },
+      { "text": "Pasighat", "isCorrect": false },
+      { "text": "Ziro", "isCorrect": false },
+      { "text": "Tawang", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Itanagar, which is the capital of Arunachal Pradesh."
+  },
+  {
+    "id": "mcq-3",
+    "question": "What is the capital of Assam?",
+    "options": [
+      { "text": "Dispur", "isCorrect": true },
+      { "text": "Guwahati", "isCorrect": false },
+      { "text": "Tezpur", "isCorrect": false },
+      { "text": "Silchar", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Dispur, which is the capital of Assam."
+  },
+  {
+    "id": "mcq-4",
+    "question": "What is the capital of Bihar?",
+    "options": [
+      { "text": "Patna", "isCorrect": true },
+      { "text": "Gaya", "isCorrect": false },
+      { "text": "Bhagalpur", "isCorrect": false },
+      { "text": "Darbhanga", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Patna, which is the capital of Bihar."
+  },
+  {
+    "id": "mcq-5",
+    "question": "What is the capital of Chhattisgarh?",
+    "options": [
+      { "text": "Bilaspur", "isCorrect": false },
+      { "text": "Raipur", "isCorrect": true },
+      { "text": "Durg", "isCorrect": false },
+      { "text": "Jagdalpur", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Raipur, which is the capital of Chhattisgarh."
+  },
+  {
+    "id": "mcq-6",
+    "question": "What is the capital of Goa?",
+    "options": [
+      { "text": "Panaji", "isCorrect": true },
+      { "text": "Margao", "isCorrect": false },
+      { "text": "Vasco da Gama", "isCorrect": false },
+      { "text": "Mapusa", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Panaji, which is the capital of Goa."
+  },
+  {
+    "id": "mcq-7",
+    "question": "What is the capital of Gujarat?",
+    "options": [
+      { "text": "Ahmedabad", "isCorrect": false },
+      { "text": "Gandhinagar", "isCorrect": true },
+      { "text": "Surat", "isCorrect": false },
+      { "text": "Rajkot", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Gandhinagar, which is the capital of Gujarat."
+  },
+  {
+    "id": "mcq-8",
+    "question": "What is the capital of Haryana?",
+    "options": [
+      { "text": "Rohtak", "isCorrect": false },
+      { "text": "Gurgaon", "isCorrect": false },
+      { "text": "Faridabad", "isCorrect": false },
+      { "text": "Chandigarh", "isCorrect": true }
+    ],
+    "explanation": "The correct answer is Chandigarh, which is the shared capital of Haryana and Punjab."
+  },
+  {
+    "id": "mcq-9",
+    "question": "What is the capital of Himachal Pradesh?",
+    "options": [
+      { "text": "Shimla", "isCorrect": true },
+      { "text": "Manali", "isCorrect": false },
+      { "text": "Dharamshala", "isCorrect": false },
+      { "text": "Kullu", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Shimla, which is the capital of Himachal Pradesh."
+  },
+  {
+    "id": "mcq-10",
+    "question": "What is the capital of Jharkhand?",
+    "options": [
+      { "text": "Ranchi", "isCorrect": true },
+      { "text": "Jamshedpur", "isCorrect": false },
+      { "text": "Dhanbad", "isCorrect": false },
+      { "text": "Bokaro", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Ranchi, which is the capital of Jharkhand."
+  },
+  {
+    "id": "mcq-11",
+    "question": "What is the capital of Karnataka?",
+    "options": [
+      { "text": "Bangalore", "isCorrect": true },
+      { "text": "Mysore", "isCorrect": false },
+      { "text": "Mangalore", "isCorrect": false },
+      { "text": "Hubli", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Bangalore, which is the capital of Karnataka."
+  },
+  {
+    "id": "mcq-12",
+    "question": "What is the capital of Kerala?",
+    "options": [
+      { "text": "Thiruvananthapuram", "isCorrect": true },
+      { "text": "Kochi", "isCorrect": false },
+      { "text": "Kozhikode", "isCorrect": false },
+      { "text": "Alappuzha", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Thiruvananthapuram, which is the capital of Kerala."
+  },
+  {
+    "id": "mcq-13",
+    "question": "What is the capital of Madhya Pradesh?",
+    "options": [
+      { "text": "Bhopal", "isCorrect": true },
+      { "text": "Indore", "isCorrect": false },
+      { "text": "Gwalior", "isCorrect": false },
+      { "text": "Jabalpur", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Bhopal, which is the capital of Madhya Pradesh."
+  },
+  {
+    "id": "mcq-14",
+    "question": "What is the capital of Maharashtra?",
+    "options": [
+      { "text": "Mumbai", "isCorrect": true },
+      { "text": "Pune", "isCorrect": false },
+      { "text": "Nagpur", "isCorrect": false },
+      { "text": "Nashik", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Mumbai, which is the capital of Maharashtra."
+  },
+  {
+    "id": "mcq-15",
+    "question": "What is the capital of Manipur?",
+    "options": [
+      { "text": "Imphal", "isCorrect": true },
+      { "text": "Churachandpur", "isCorrect": false },
+      { "text": "Ukhrul", "isCorrect": false },
+      { "text": "Bishnupur", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Imphal, which is the capital of Manipur."
+  },
+  {
+    "id": "mcq-16",
+    "question": "What is the capital of Meghalaya?",
+    "options": [
+      { "text": "Shillong", "isCorrect": true },
+      { "text": "Tura", "isCorrect": false },
+      { "text": "Cherrapunji", "isCorrect": false },
+      { "text": "Jowai", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Shillong, which is the capital of Meghalaya."
+  },
+  {
+    "id": "mcq-17",
+    "question": "What is the capital of Mizoram?",
+    "options": [
+      { "text": "Aizawl", "isCorrect": true },
+      { "text": "Lunglei", "isCorrect": false },
+      { "text": "Champhai", "isCorrect": false },
+      { "text": "Kolasib", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Aizawl, which is the capital of Mizoram."
+  },
+  {
+    "id": "mcq-18",
+    "question": "What is the capital of Nagaland?",
+    "options": [
+      { "text": "Kohima", "isCorrect": true },
+      { "text": "Dimapur", "isCorrect": false },
+      { "text": "Mokokchung", "isCorrect": false },
+      { "text": "Wokha", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Kohima, which is the capital of Nagaland."
+  },
+  {
+    "id": "mcq-19",
+    "question": "What is the capital of Odisha?",
+    "options": [
+      { "text": "Bhubaneshwar", "isCorrect": true },
+      { "text": "Cuttack", "isCorrect": false },
+      { "text": "Puri", "isCorrect": false },
+      { "text": "Rourkela", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Bhubaneshwar, which is the capital of Odisha."
+  },
+  {
+    "id": "mcq-20",
+    "question": "What is the capital of Punjab?",
+    "options": [
+      { "text": "Chandigarh", "isCorrect": true },
+      { "text": "Amritsar", "isCorrect": false },
+      { "text": "Ludhiana", "isCorrect": false },
+      { "text": "Patiala", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Chandigarh, which is the shared capital of Punjab and Haryana."
+  },
+  {
+    "id": "mcq-21",
+    "question": "What is the capital of Rajasthan?",
+    "options": [
+      { "text": "Jaipur", "isCorrect": true },
+      { "text": "Jodhpur", "isCorrect": false },
+      { "text": "Udaipur", "isCorrect": false },
+      { "text": "Kota", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Jaipur, which is the capital of Rajasthan."
+  },
+  {
+    "id": "mcq-22",
+    "question": "What is the capital of Sikkim?",
+    "options": [
+      { "text": "Gangtok", "isCorrect": true },
+      { "text": "Namchi", "isCorrect": false },
+      { "text": "Pelling", "isCorrect": false },
+      { "text": "Ravangla", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Gangtok, which is the capital of Sikkim."
+  },
+  {
+    "id": "mcq-23",
+    "question": "What is the capital of Tamil Nadu?",
+    "options": [
+      { "text": "Chennai", "isCorrect": true },
+      { "text": "Coimbatore", "isCorrect": false },
+      { "text": "Madurai", "isCorrect": false },
+      { "text": "Trichy", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Chennai, which is the capital of Tamil Nadu."
+  },
+  {
+    "id": "mcq-24",
+    "question": "What is the capital of Telangana?",
+    "options": [
+      { "text": "Hyderabad", "isCorrect": true },
+      { "text": "Warangal", "isCorrect": false },
+      { "text": "Nizamabad", "isCorrect": false },
+      { "text": "Karimnagar", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Hyderabad, which is the capital of Telangana."
+  },
+  {
+    "id": "mcq-25",
+    "question": "What is the capital of Tripura?",
+    "options": [
+      { "text": "Agartala", "isCorrect": true },
+      { "text": "Dharmanagar", "isCorrect": false },
+      { "text": "Udaipur", "isCorrect": false },
+      { "text": "Kailashahar", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Agartala, which is the capital of Tripura."
+  },
+  {
+    "id": "mcq-26",
+    "question": "What is the capital of Uttarakhand?",
+    "options": [
+      { "text": "Dehradun", "isCorrect": true },
+      { "text": "Haridwar", "isCorrect": false },
+      { "text": "Rishikesh", "isCorrect": false },
+      { "text": "Nainital", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Dehradun, which is the capital of Uttarakhand."
+  },
+  {
+    "id": "mcq-27",
+    "question": "What is the capital of Uttar Pradesh?",
+    "options": [
+      { "text": "Lucknow", "isCorrect": true },
+      { "text": "Varanasi", "isCorrect": false },
+      { "text": "Kanpur", "isCorrect": false },
+      { "text": "Agra", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Lucknow, which is the capital of Uttar Pradesh."
+  },
+  {
+    "id": "mcq-28",
+    "question": "What is the capital of West Bengal?",
+    "options": [
+      { "text": "Kolkata", "isCorrect": true },
+      { "text": "Darjeeling", "isCorrect": false },
+      { "text": "Siliguri", "isCorrect": false },
+      { "text": "Howrah", "isCorrect": false }
+    ],
+    "explanation": "The correct answer is Kolkata, which is the capital of West Bengal."
+  },
+    {
+        id: "math-1",
+        question: "Simplify the expression: 4 + 2 × (3 - 1).",
+        options: [
+            { text: "6", isCorrect: false },
+            { text: "8", isCorrect: true },
+            { text: "10", isCorrect: false },
+            { text: "12", isCorrect: false }
+        ],
+        explanation: "4 + 2 × (3 - 1) = 4 + 2 × 2 = 4 + 4 = 8."
+    },
+    {
+        id: "math-2",
+        question: "Calculate: 12 ÷ 2 × 3 - 5.",
+        options: [
+            { text: "15", isCorrect: false },
+            { text: "13", isCorrect: true },
+            { text: "11", isCorrect: false },
+            { text: "10", isCorrect: false }
+        ],
+        explanation: "12 ÷ 2 × 3 - 5 = 6 × 3 - 5 = 18 - 5 = 13."
+    },
+    {
+        id: "math-3",
+        question: "Find the value of: 5 + (7 - 2) × 4.",
+        options: [
+            { text: "20", isCorrect: false },
+            { text: "25", isCorrect: true },
+            { text: "30", isCorrect: false },
+            { text: "35", isCorrect: false }
+        ],
+        explanation: "5 + (7 - 2) × 4 = 5 + 5 × 4 = 5 + 20 = 25."
+    },
+    {
+        id: "math-4",
+        question: "Simplify: 6 × (2 + 3) - 4.",
+        options: [
+            { text: "22", isCorrect: false },
+            { text: "26", isCorrect: true },
+            { text: "30", isCorrect: false },
+            { text: "32", isCorrect: false }
+        ],
+        explanation: "6 × (2 + 3) - 4 = 6 × 5 - 4 = 30 - 4 = 26."
+    },
+    {
+        id: "math-5",
+        question: "Determine the result of: 10 - (3 × 2 + 4).",
+        options: [
+            { text: "4", isCorrect: false },
+            { text: "0", isCorrect: true },
+            { text: "2", isCorrect: false },
+            { text: "-2", isCorrect: false }
+        ],
+        explanation: "10 - (3 × 2 + 4) = 10 - (6 + 4) = 10 - 10 = 0."
+    },
+    {
+        id: "math-6",
+        question: "Evaluate the expression: 3 × (4 - 2) + 7.",
+        options: [
+            { text: "10", isCorrect: false },
+            { text: "13", isCorrect: true },
+            { text: "15", isCorrect: false },
+            { text: "17", isCorrect: false }
+        ],
+        explanation: "3 × (4 - 2) + 7 = 3 × 2 + 7 = 6 + 7 = 13."
+    },
+    {
+        id: "math-7",
+        question: "Simplify: 8 + 2 × (5 - 3).",
+        options: [
+            { text: "10", isCorrect: false },
+            { text: "12", isCorrect: true },
+            { text: "14", isCorrect: false },
+            { text: "16", isCorrect: false }
+        ],
+        explanation: "8 + 2 × (5 - 3) = 8 + 2 × 2 = 8 + 4 = 12."
+    },
+    {
+        id: "math-8",
+        question: "Calculate: 15 ÷ (3 + 2) - 4.",
+        options: [
+            { text: "1", isCorrect: false },
+            { text: "-1", isCorrect: true },
+            { text: "0", isCorrect: false },
+            { text: "2", isCorrect: false }
+        ],
+        explanation: "15 ÷ (3 + 2) - 4 = 15 ÷ 5 - 4 = 3 - 4 = -1."
+    },
+    {
+        id: "math-9",
+        question: "Find the value of: 6 - (2 × 3 + 1).",
+        options: [
+            { text: "-1", isCorrect: true },
+            { text: "0", isCorrect: false },
+            { text: "1", isCorrect: false },
+            { text: "-2", isCorrect: false }
+        ],
+        explanation: "6 - (2 × 3 + 1) = 6 - (6 + 1) = 6 - 7 = -1."
+    },
+    {
+        id: "math-10",
+        question: "Determine the result of: 20 ÷ (4 × 2) + 5.",
+        options: [
+            { text: "5.5", isCorrect: false },
+            { text: "7.5", isCorrect: true },
+            { text: "6", isCorrect: false },
+            { text: "8", isCorrect: false }
+        ],
+        explanation: "20 ÷ (4 × 2) + 5 = 20 ÷ 8 + 5 = 2.5 + 5 = 7.5."
+    },
+    
+    {
+      "id": "1",
+      "question": "What is the capital city of Japan?",
+      "options": [
+        { "text": "Seoul", "isCorrect": false },
+        { "text": "Beijing", "isCorrect": false },
+        { "text": "Tokyo", "isCorrect": true },
+        { "text": "Bangkok", "isCorrect": false }
+      ],
+      "explanation": "Tokyo is the capital city of Japan since 1868. It's the most populous metropolitan area in the world and serves as Japan's political, economic, and cultural center."
+    },
+    {
+      "id": "2",
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": [
+        { "text": "Charles Dickens", "isCorrect": false },
+        { "text": "William Shakespeare", "isCorrect": true },
+        { "text": "Jane Austen", "isCorrect": false },
+        { "text": "Christopher Marlowe", "isCorrect": false }
+      ],
+      "explanation": "Romeo and Juliet was written by William Shakespeare around 1595. It's one of his most famous tragedies about two young star-crossed lovers."
+    },
+    {
+      "id": "3",
+      "question": "In which year did the Titanic sink?",
+      "options": [
+        { "text": "1910", "isCorrect": false },
+        { "text": "1911", "isCorrect": false },
+        { "text": "1912", "isCorrect": true },
+        { "text": "1913", "isCorrect": false }
+      ],
+      "explanation": "The RMS Titanic sank in the early morning hours of April 15, 1912, after striking an iceberg during her maiden voyage from Southampton to New York City."
+    },
+    {
+      "id": "4",
+      "question": "What is the largest planet in our solar system?",
+      "options": [
+        { "text": "Saturn", "isCorrect": false },
+        { "text": "Jupiter", "isCorrect": true },
+        { "text": "Neptune", "isCorrect": false },
+        { "text": "Uranus", "isCorrect": false }
+      ],
+      "explanation": "Jupiter is the largest planet in our solar system. It's a gas giant with a mass more than two and a half times that of all the other planets combined."
+    },
+    {
+      "id": "5",
+      "question": "What is the currency of Australia?",
+      "options": [
+        { "text": "Australian Dollar", "isCorrect": true },
+        { "text": "Australian Pound", "isCorrect": false },
+        { "text": "Australian Euro", "isCorrect": false },
+        { "text": "Australian Franc", "isCorrect": false }
+      ],
+      "explanation": "The Australian Dollar (AUD) has been Australia's official currency since 1966, when it replaced the Australian pound."
+    },
+    {
+      "id": "6",
+      "question": "Who painted the Mona Lisa?",
+      "options": [
+        { "text": "Michelangelo", "isCorrect": false },
+        { "text": "Leonardo da Vinci", "isCorrect": true },
+        { "text": "Raphael", "isCorrect": false },
+        { "text": "Vincent van Gogh", "isCorrect": false }
+      ],
+      "explanation": "The Mona Lisa was painted by Leonardo da Vinci between 1503-1519. It's one of the most famous paintings in the world, housed at the Louvre Museum in Paris."
+    },
+    {
+      "id": "7",
+      "question": "In which year did World War II end?",
+      "options": [
+        { "text": "1944", "isCorrect": false },
+        { "text": "1945", "isCorrect": true },
+        { "text": "1946", "isCorrect": false },
+        { "text": "1947", "isCorrect": false }
+      ],
+      "explanation": "World War II ended in 1945, with Germany surrendering in May and Japan surrendering in August following the atomic bombings of Hiroshima and Nagasaki."
+    },
+    {
+      "id": "8",
+      "question": "Which planet is known as the 'Red Planet'?",
+      "options": [
+        { "text": "Venus", "isCorrect": false },
+        { "text": "Mars", "isCorrect": true },
+        { "text": "Mercury", "isCorrect": false },
+        { "text": "Jupiter", "isCorrect": false }
+      ],
+      "explanation": "Mars is known as the 'Red Planet' due to its reddish appearance, caused by iron oxide (rust) on its surface."
+    },
+    {
+      "id": "9",
+      "question": "Who was the first woman to win a Nobel Prize?",
+      "options": [
+        { "text": "Mother Teresa", "isCorrect": false },
+        { "text": "Marie Curie", "isCorrect": true },
+        { "text": "Dorothy Hodgkin", "isCorrect": false },
+        { "text": "Barbara McClintock", "isCorrect": false }
+      ],
+      "explanation": "Marie Curie was the first woman to win a Nobel Prize, winning the Physics Prize in 1903 and the Chemistry Prize in 1911. She remains the only woman to win multiple Nobel Prizes."
+    },
+    {
+      "id": "10",
+      "question": "What is the capital of Canada?",
+      "options": [
+        { "text": "Toronto", "isCorrect": false },
+        { "text": "Vancouver", "isCorrect": false },
+        { "text": "Ottawa", "isCorrect": true },
+        { "text": "Montreal", "isCorrect": false }
+      ],
+      "explanation": "Ottawa is the capital city of Canada, located in the province of Ontario. It was chosen as the capital by Queen Victoria in 1857."
+    },
+
+    
+    
+  
+    {
+      "id": "11",
+      "question": "Who is known as the 'Father of Modern Physics'?",
+      "options": [
+        { "text": "Isaac Newton", "isCorrect": false },
+        { "text": "Albert Einstein", "isCorrect": true },
+        { "text": "Niels Bohr", "isCorrect": false },
+        { "text": "Max Planck", "isCorrect": false }
+      ],
+      "explanation": "Albert Einstein is considered the Father of Modern Physics due to his revolutionary theories of relativity and contributions to quantum mechanics, fundamentally changing our understanding of the universe."
+    },
+    {
+      "id": "12",
+      "question": "What is the largest mammal in the world?",
+      "options": [
+        { "text": "African Elephant", "isCorrect": false },
+        { "text": "Blue Whale", "isCorrect": true },
+        { "text": "Sperm Whale", "isCorrect": false },
+        { "text": "Humpback Whale", "isCorrect": false }
+      ],
+      "explanation": "The Blue Whale is the largest animal known to have ever existed, reaching lengths of up to 100 feet and weights of up to 200 tons."
+    },
+    {
+      "id": "13",
+      "question": "What is the smallest prime number?",
+      "options": [
+        { "text": "0", "isCorrect": false },
+        { "text": "1", "isCorrect": false },
+        { "text": "2", "isCorrect": true },
+        { "text": "3", "isCorrect": false }
+      ],
+      "explanation": "2 is the smallest prime number and the only even prime number. A prime number is a natural number greater than 1 that is only divisible by 1 and itself."
+    },
+    {
+      "id": "14",
+      "question": "Which gas makes up the majority of Earth's atmosphere?",
+      "options": [
+        { "text": "Oxygen", "isCorrect": false },
+        { "text": "Carbon Dioxide", "isCorrect": false },
+        { "text": "Nitrogen", "isCorrect": true },
+        { "text": "Argon", "isCorrect": false }
+      ],
+      "explanation": "Nitrogen makes up approximately 78% of Earth's atmosphere, followed by oxygen at about 21%, with other gases making up the remaining 1%."
+    },
+    {
+      "id": "15",
+      "question": "What is the currency of India?",
+      "options": [
+        { "text": "Indian Rupee", "isCorrect": true },
+        { "text": "Indian Dollar", "isCorrect": false },
+        { "text": "Indian Pound", "isCorrect": false },
+        { "text": "Indian Franc", "isCorrect": false }
+      ],
+      "explanation": "The Indian Rupee (INR) is the official currency of India. Its symbol is ₹ and it has been the country's currency since its independence."
+    },
+    {
+      "id": "16",
+      "question": "Who is the author of the 'Harry Potter' series?",
+      "options": [
+        { "text": "Stephenie Meyer", "isCorrect": false },
+        { "text": "J.K. Rowling", "isCorrect": true },
+        { "text": "C.S. Lewis", "isCorrect": false },
+        { "text": "Roald Dahl", "isCorrect": false }
+      ],
+      "explanation": "J.K. Rowling is the author of the Harry Potter series, with the first book published in 1997. The series has become one of the best-selling book series in history."
+    },
+    {
+      "id": "17",
+      "question": "What is the capital of France?",
+      "options": [
+        { "text": "London", "isCorrect": false },
+        { "text": "Berlin", "isCorrect": false },
+        { "text": "Paris", "isCorrect": true },
+        { "text": "Madrid", "isCorrect": false }
+      ],
+      "explanation": "Paris is the capital city of France, known for landmarks like the Eiffel Tower and the Louvre. It has been France's capital since 508 CE."
+    },
+    {
+      "id": "18",
+      "question": "What is the currency of China?",
+      "options": [
+        { "text": "Yuan", "isCorrect": true },
+        { "text": "Yen", "isCorrect": false },
+        { "text": "Won", "isCorrect": false },
+        { "text": "Baht", "isCorrect": false }
+      ],
+      "explanation": "The Chinese Yuan (CNY) is the official currency of the People's Republic of China. It's also known as Renminbi (RMB)."
+    },
+    {
+      "id": "19",
+      "question": "What is the largest desert in the world?",
+      "options": [
+        { "text": "Sahara Desert", "isCorrect": false },
+        { "text": "Arabian Desert", "isCorrect": false },
+        { "text": "Antarctica", "isCorrect": true },
+        { "text": "Gobi Desert", "isCorrect": false }
+      ],
+      "explanation": "Antarctica is technically the world's largest desert, as a desert is defined by its low precipitation rather than temperature. It receives very little snowfall, making it a cold desert."
+    },
+    {
+      "id": "20",
+      "question": "What is the capital of Brazil?",
+      "options": [
+        { "text": "Rio de Janeiro", "isCorrect": false },
+        { "text": "São Paulo", "isCorrect": false },
+        { "text": "Brasília", "isCorrect": true },
+        { "text": "Salvador", "isCorrect": false }
+      ],
+      "explanation": "Brasília has been the capital of Brazil since 1960, when it replaced Rio de Janeiro. It was purposely built to serve as the country's capital in Brazil's interior."
+    },
+    {
+      "id": "21",
+      "question": "In which year did the European Union (EU) come into existence?",
+      "options": [
+        { "text": "1991", "isCorrect": false },
+        { "text": "1992", "isCorrect": false },
+        { "text": "1993", "isCorrect": true },
+        { "text": "1994", "isCorrect": false }
+      ],
+      "explanation": "The European Union was officially created by the Maastricht Treaty, which came into effect on November 1, 1993. However, its predecessors date back to the 1950s."
+    },
+    {
+      "id": "22",
+      "question": "What is the speed of light?",
+      "options": [
+        { "text": "299,792 km/s", "isCorrect": true },
+        { "text": "199,792 km/s", "isCorrect": false },
+        { "text": "399,792 km/s", "isCorrect": false },
+        { "text": "249,792 km/s", "isCorrect": false }
+      ],
+      "explanation": "The speed of light in a vacuum is approximately 299,792 kilometers per second. This is a universal constant, denoted by 'c' in physics equations."
+    },
+    {
+      "id": "23",
+      "question": "In which year did the United Nations (UN) come into existence?",
+      "options": [
+        { "text": "1944", "isCorrect": false },
+        { "text": "1945", "isCorrect": true },
+        { "text": "1946", "isCorrect": false },
+        { "text": "1947", "isCorrect": false }
+      ],
+      "explanation": "The United Nations was established on October 24, 1945, after World War II, with the aim of maintaining international peace and security."
+    },
+    {
+      "id": "24",
+      "question": "Who was the first man to step on the moon?",
+      "options": [
+        { "text": "Buzz Aldrin", "isCorrect": false },
+        { "text": "Neil Armstrong", "isCorrect": true },
+        { "text": "John Glenn", "isCorrect": false },
+        { "text": "Yuri Gagarin", "isCorrect": false }
+      ],
+      "explanation": "Neil Armstrong was the first human to step on the moon on July 20, 1969, during the Apollo 11 mission, famously declaring 'That's one small step for man, one giant leap for mankind.'"
+    },
+    {
+      "id": "25",
+      "question": "What is the largest bird in the world?",
+      "options": [
+        { "text": "Ostrich", "isCorrect": true },
+        { "text": "Emu", "isCorrect": false },
+        { "text": "Cassowary", "isCorrect": false },
+        { "text": "Andean Condor", "isCorrect": false }
+      ],
+      "explanation": "The Ostrich is the largest living species of bird, growing up to 9 feet tall and weighing up to 330 pounds. It's also the fastest land bird."
+    },
+    {
+      "id": "26",
+      "question": "Who won the Nobel Peace Prize in 2021?",
+      "options": [
+        { "text": "World Food Programme", "isCorrect": false },
+        { "text": "Maria Ressa and Dmitry Muratov", "isCorrect": true },
+        { "text": "World Health Organization", "isCorrect": false },
+        { "text": "Greta Thunberg", "isCorrect": false }
+      ],
+      "explanation": "Maria Ressa and Dmitry Muratov won the 2021 Nobel Peace Prize for their efforts to safeguard freedom of expression through journalism in their respective countries, the Philippines and Russia."
+    },
+    {
+      "id": "27",
+      "question": "In which year did the Industrial Revolution begin?",
+      "options": [
+        { "text": "Late 17th century", "isCorrect": false },
+        { "text": "Late 18th century", "isCorrect": true },
+        { "text": "Early 19th century", "isCorrect": false },
+        { "text": "Mid 19th century", "isCorrect": false }
+      ],
+      "explanation": "The Industrial Revolution began in the late 18th century (around 1760) in Great Britain and later spread to other parts of the world. It marked a major turning point in human history with the transition to new manufacturing processes."
+    },
+    {
+      "id": "28",
+      "question": "Which country hosted the 2016 Summer Olympics?",
+      "options": [
+        { "text": "China", "isCorrect": false },
+        { "text": "Brazil", "isCorrect": true },
+        { "text": "Russia", "isCorrect": false },
+        { "text": "United Kingdom", "isCorrect": false }
+      ],
+      "explanation": "The 2016 Summer Olympics were held in Rio de Janeiro, Brazil. It was the first Olympics to be held in South America and the first to be held in a Portuguese-speaking country."
+    },
+    {
+      "id": "29",
+      "question": "What is the currency of Russia?",
+      "options": [
+        { "text": "Russian Ruble", "isCorrect": true },
+        { "text": "Russian Dollar", "isCorrect": false },
+        { "text": "Russian Euro", "isCorrect": false },
+        { "text": "Russian Franc", "isCorrect": false }
+      ],
+      "explanation": "The Russian Ruble (RUB) is the official currency of Russia. It has been Russia's official currency since the country's emergence from the Soviet Union in 1991."
+    },
+    {
+      "id": "30",
+      "question": "In which year did the French Revolution begin?",
+      "options": [
+        { "text": "1787", "isCorrect": false },
+        { "text": "1788", "isCorrect": false },
+        { "text": "1789", "isCorrect": true },
+        { "text": "1790", "isCorrect": false }
+      ],
+      "explanation": "The French Revolution began in 1789 with the storming of the Bastille on July 14th. This event marked the beginning of the end of the French monarchy and led to major social and political changes in France."
+    },
+    {
+      "id": "31",
+      "question": "Who is known as the 'Father of Computers'?",
+      "options": [
+        { "text": "Alan Turing", "isCorrect": false },
+        { "text": "Charles Babbage", "isCorrect": true },
+        { "text": "John von Neumann", "isCorrect": false },
+        { "text": "Ada Lovelace", "isCorrect": false }
+      ],
+      "explanation": "Charles Babbage is considered the 'Father of Computers' for his design of the Analytical Engine in the 1830s, which contained most of the elements of modern computers."
+    },
+    {
+      "id": "32",
+      "question": "What is the capital of Turkey?",
+      "options": [
+        { "text": "Istanbul", "isCorrect": false },
+        { "text": "Ankara", "isCorrect": true },
+        { "text": "Izmir", "isCorrect": false },
+        { "text": "Bursa", "isCorrect": false }
+      ],
+      "explanation": "Ankara has been the capital of Turkey since 1923, when it replaced Istanbul (formerly Constantinople) as the seat of government following the establishment of the Republic of Turkey."
+    },
+    {
+      "id": "33",
+      "question": "Who was the first woman to win a Nobel Prize in Physics?",
+      "options": [
+        { "text": "Marie Curie", "isCorrect": true },
+        { "text": "Lise Meitner", "isCorrect": false },
+        { "text": "Maria Goeppert Mayer", "isCorrect": false },
+        { "text": "Donna Strickland", "isCorrect": false }
+      ],
+      "explanation": "Marie Curie won the Nobel Prize in Physics in 1903 (shared with Pierre Curie and Henri Becquerel) for their work on radioactivity, making her the first woman to win a Nobel Prize in Physics."
+    },
+    {
+      "id": "34",
+      "question": "What is the largest moon in our solar system?",
+      "options": [
+        { "text": "Titan", "isCorrect": false },
+        { "text": "Ganymede", "isCorrect": true },
+        { "text": "Europa", "isCorrect": false },
+        { "text": "Io", "isCorrect": false }
+      ],
+      "explanation": "Ganymede, a moon of Jupiter, is the largest moon in our solar system. It's even larger than the planet Mercury and is the only moon known to have its own magnetic field."
+    },
+    {
+      "id": "35",
+      "question": "What is the capital of Egypt?",
+      "options": [
+        { "text": "Alexandria", "isCorrect": false },
+        { "text": "Cairo", "isCorrect": true },
+        { "text": "Luxor", "isCorrect": false },
+        { "text": "Giza", "isCorrect": false }
+      ],
+      "explanation": "Cairo is the capital of Egypt and the largest city in the Arab world. It has been a center of Egypt's political and cultural life for over a thousand years."
+    },
+    {
+      "id": "36",
+      "question": "Which country has the highest life expectancy?",
+      "options": [
+        { "text": "Japan", "isCorrect": false },
+        { "text": "Switzerland", "isCorrect": false },
+        { "text": "Hong Kong", "isCorrect": true },
+        { "text": "Singapore", "isCorrect": false }
+      ],
+      "explanation": "Hong Kong has one of the highest life expectancies in the world, with factors such as advanced healthcare systems, good nutrition, and high living standards contributing to longevity."
+    }
+  
+  
+    
+  
+    // Add more MCQs following the same pattern...
+];
