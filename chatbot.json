@@ -3,18 +3,21 @@
     "code": "YB2025-001",
     "used": false,
     "usedBy": null,
-    "createdDate": "2025-03-01T00:00:00Z"
+    "createdDate": "2025-03-01T00:00:00Z",
+    "duration": "1 month"
   },
   {
     "code": "YB2025-002",
-    "used": true,
+    "used": false,
     "usedBy": null,
-    "createdDate": "2025-03-01T00:00:00Z"
+    "createdDate": "2025-03-01T00:00:00Z",
+    "duration": "1 week"
   },
   {
     "code": "YB2025-003",
     "used": false,
     "usedBy": null,
-    "createdDate": "2025-03-01T00:00:00Z"
+    "createdDate": "2025-03-01T00:00:00Z",
+    "duration": "1 day"
   }
 ]
