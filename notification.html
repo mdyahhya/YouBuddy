@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OneSignal Vercel Demo</title>
+  <!-- OneSignal SDK -->
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  
+</head>
+<body>
+  <h1>🚀 Welcome to Push Notification Demo</h1>
+  <p>This demo shows how to use OneSignal on a Vercel-hosted site.</p>
+  <button onclick="sendTestNotification()">🔔 Send Test Notification</button>
+
+  <script>
+    
+    window.OneSignal = window.OneSignal || [];
+OneSignal.push(function () {
+  OneSignal.init({
+    appId: "YOUR-ONESIGNAL-APP-ID", // ✅ Replace this
+    notifyButton: {
+      enable: true, // Shows bell widget
+    },
+  });
+});
+
+function sendTestNotification() {
+  OneSignal.push(function () {
+    OneSignal.sendSelfNotification(
+      "🔥 Welcome to My Vercel Site!",
+      {
+        body: "Click to open the app!",
+        icon: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
+        url: "https://your-vercel-site.vercel.app", // ✅ Replace this
+      }
+    );
+  });
+}
+
+  </script>
+</body>
+</html>
